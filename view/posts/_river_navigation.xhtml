@@ -7,7 +7,7 @@
     </a>
   </li>
   <?r end ?>
-  <li class="post-icon current">
+  <li class="post-icon current #{ @river.posts(limit: 1).first == @post ? 'last' : '' }">
     #{ member_img(@post.member, "post-icon") }
   </li>
   <?r @post.succ(@n, @river.id).each do |p| ?>

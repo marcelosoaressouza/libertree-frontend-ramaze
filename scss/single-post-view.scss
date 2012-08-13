@@ -44,13 +44,14 @@ body.body.single-post-view .main {
         padding-right: 5px;
         border-radius: 0px 5px 5px 0px;
       }
-
       &.current {
         margin: 0 5px;
-        border-radius: 10px;
-        box-shadow: 0px -8px 15px #fff;
-        -moz-box-shadow: 0px -8px 15px #fff;
-        -webkit-box-shadow: 0px -8px 15px #fff;
+        img {
+          border-radius: 10px;
+          box-shadow: 0px -8px 15px #fff;
+          -moz-box-shadow: 0px -8px 15px #fff;
+          -webkit-box-shadow: 0px -8px 15px #fff;
+        }
       }
       a {
         border: none;
