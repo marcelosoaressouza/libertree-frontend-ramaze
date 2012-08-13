@@ -63,3 +63,5 @@
     </div>
   <?r end ?>
 </div>
+
+#{ Controller::Posts.render_partial '_river_navigation', post: @post, river: account.home_river, n: 5 }

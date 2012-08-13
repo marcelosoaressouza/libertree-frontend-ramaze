@@ -1,4 +1,5 @@
 @import "colours.scss";
+@import "scss-include/mixins.scss";
 
 body.body.single-post-view .main {
     margin: 0 auto;
@@ -11,6 +12,52 @@ body.body.single-post-view .main {
 }
 
 .single-post-view {
+  ol.river-nav {
+    position: relative;
+    height: 40px;
+    background: $sand;
+    padding: 5px;
+    margin: 1em 0px 1em 0px;
+    @include shadow;
+    border-radius: 3px;
+
+    .label {
+      position: absolute;
+      margin-left: 1em;
+      left: 0;
+      line-height: 40px;
+    }
+
+    img.post-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    li.post-icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 5px 0;
+
+      &.last {
+        border-right: 3px solid $bark;
+        padding-right: 5px;
+        border-radius: 0px 5px 5px 0px;
+      }
+
+      &.current {
+        margin: 0 5px;
+        border-radius: 10px;
+        box-shadow: 0px -8px 15px #fff;
+        -moz-box-shadow: 0px -8px 15px #fff;
+        -webkit-box-shadow: 0px -8px 15px #fff;
+      }
+      a {
+        border: none;
+      }
+    }
+    text-align: center;
+  }
   div.post {
     height: 100%;
     width: 100%;

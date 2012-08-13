@@ -1,0 +1,20 @@
+<ol class="river-nav">
+  <span class="label">#{@river.label}</span>
+  <?r @post.pred(@n, @river.id).each do |p| ?>
+  <li class="post-icon" data-post-id="#{p.id}">
+    <a href="/posts/show/#{p.id}">
+      #{ member_img(p.member, "post-icon", ::CGI.escape_html(p.glimpse)) }
+    </a>
+  </li>
+  <?r end ?>
+  <li class="post-icon current">
+    #{ member_img(@post.member, "post-icon") }
+  </li>
+  <?r @post.succ(@n, @river.id).each do |p| ?>
+  <li class="post-icon #{ @river.posts(limit: 1).first == p ? 'last' : '' }">
+    <a href="/posts/show/#{p.id}">
+      #{ member_img(p.member, "post-icon", ::CGI.escape_html(p.glimpse)) }
+    </a>
+  </li>
+  <?r end ?>
+</ol>
