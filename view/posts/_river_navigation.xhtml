@@ -1,7 +1,7 @@
 <ol class="river-nav">
   <span class="label">#{@river.label}</span>
-  <?r @post.pred(@n, @river.id).each do |p| ?>
-  <li class="post-icon" data-post-id="#{p.id}">
+  <?r @post.pred(@n, @river.id).reverse.each do |p| ?>
+  <li class="post-icon">
     <a href="/posts/show/#{p.id}">
       #{ member_img(p.member, "post-icon", ::CGI.escape_html(p.glimpse)) }
     </a>
@@ -10,7 +10,7 @@
   <li class="post-icon current #{ @river.posts(limit: 1).first == @post ? 'last' : '' }">
     #{ member_img(@post.member, "post-icon") }
   </li>
-  <?r @post.succ(@n, @river.id).each do |p| ?>
+  <?r @post.succ(@n, @river.id).reverse.each do |p| ?>
   <li class="post-icon #{ @river.posts(limit: 1).first == p ? 'last' : '' }">
     <a href="/posts/show/#{p.id}">
       #{ member_img(p.member, "post-icon", ::CGI.escape_html(p.glimpse)) }
