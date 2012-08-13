@@ -1,3 +1,5 @@
+#{ Controller::Posts.render_partial '_river_navigation', post: @post, n: 5, succ: @post.succ(5, account.home_river.id), pred: @post.pred(5, account.home_river.id) }
+
 <div class="post has-shadow" data-post-id="#{@post.id}">
   <?r if session[:layout] != 'narrow' ?>
     <div class="post-pane">
@@ -63,5 +65,3 @@
     </div>
   <?r end ?>
 </div>
-
-#{ Controller::Posts.render_partial '_river_navigation', post: @post, river: account.home_river, n: 5 }
