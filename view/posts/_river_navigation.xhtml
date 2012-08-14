@@ -1,6 +1,8 @@
 <ol class="river-nav">
   <?r if @succ.length == @n ?>
-  more
+  <a href="#" title="#{_('newer')}">
+    newer
+  </a>
   <?r end ?>
   <?r @succ.each do |p| ?>
   <li class="post-icon">
@@ -20,6 +22,8 @@
   </li>
   <?r end ?>
   <?r if @pred.length == @n ?>
-  more
+  <a href="#" title="#{_('older')}">
+    older
+  </a>
   <?r end ?>
 </ol>
