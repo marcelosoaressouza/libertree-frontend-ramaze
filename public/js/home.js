@@ -88,13 +88,13 @@ $(document).ready( function() {
     );
 
     if( wantsToComment ) {
-      var bgTop = $('body.body').scrollTop();
-      var excerptTruncation = excerpt.offset().top + excerpt.height() - $('body.body').height();
+      var scrollTop = $('html').scrollTop();
+      var excerptTruncation = excerpt.position().top + excerpt.height() - scrollTop - $(window).height();
       if( excerptTruncation < 0 ) {
         excerptTruncation = 0;
       }
-      $('body.body').animate(
-        { scrollTop: bgTop + heightDifference + excerptTruncation },
+      $('html').animate(
+        { scrollTop: scrollTop + heightDifference + excerptTruncation },
         animationSpeed,
         function() {
           excerpt.find('textarea.comment').focus();
@@ -114,10 +114,11 @@ $(document).ready( function() {
     var animationSpeed = ( excerpt.find('.overflowed').height() - 200 ) * 2;
 
     var top = excerpt.position().top;
-    var bgTop = $('body.body').scrollTop();
-    if( top < 100 ){
-      $('body.body').animate(
-        { scrollTop: bgTop + ( top - 100 ) },
+    var windowTop = $('html').scrollTop();
+    var scrollTop = top - windowTop
+    if( scrollTop < 100 ){
+      $('html').animate(
+        { scrollTop: windowTop + ( scrollTop - 100 ) },
         animationSpeed
       );
     }
@@ -152,9 +153,10 @@ $(document).ready( function() {
   $('.load-more').live( 'click', function(event) {
     event.preventDefault();
 
-    $('.more-posts-divider').remove();
     $('#no-more-posts').remove();
-    $('#post-excerpts').prepend('<div class="more-posts-divider"></div>');
+    $('.more-posts-divider').removeClass('more-posts-divider');
+    $('.post-excerpt:first').addClass('more-posts-divider'),
+
     prependSpinner('#post-excerpts');
     loadPostExcerpts(
       $('#post-excerpts').data('river-id'),
@@ -165,7 +167,6 @@ $(document).ready( function() {
         $('.more-posts .n').text('0');
       }
     );
-    return false;
   } );
 
   /* ---------------------------------------------------- */
