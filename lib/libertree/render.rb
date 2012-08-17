@@ -40,8 +40,15 @@ module Libertree
         a['href'] = a['href'].gsub(/javascript:/i, 'nojavascript:')
       end
       # resolve uris
-      if a['href'] =~ %r{http://}
+      if a['href'] =~ %r{http://} && ! a['href'].start_with?($conf['frontend_url_base'])
         a['href'] = resolve_redirection(a['href'])
+      end
+    end
+
+    # hashtaggify everything that is not inside of code or pre tags
+    html.traverse do |node|
+      if node.ancestors("code").empty? && node.ancestors("pre") && node.text?
+        node.replace Nokogiri::HTML::fragment(Libertree::hashtaggify(node.text))
       end
     end
 
