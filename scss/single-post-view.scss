@@ -1,7 +1,9 @@
 @import "colours.scss";
 @import "scss-include/mixins.scss";
 
-body.body.single-post-view .main {
+body.body.single-post-view {
+  height: 100%;
+  .main {
     margin: 0 auto;
     padding: 70px 0px 30px 0px;
     background: transparent;
@@ -9,6 +11,7 @@ body.body.single-post-view .main {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+  }
 }
 
 .single-post-view {
@@ -130,7 +133,7 @@ body.body.single-post-view .main {
         padding-bottom: 1em;
 
         form.comment {
-          margin-left: 45px;
+          margin-left: 50px;
           a.detach {
             display: inline;
           }

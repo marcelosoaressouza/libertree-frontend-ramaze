@@ -6,6 +6,7 @@ module Controller
       before_all do
         require_admin
         init_locale
+        @view = 'admin'
       end
 
       layout do |path|
@@ -21,6 +22,7 @@ module Controller
         @servers = Libertree::Model::Server.all.sort_by(&:name_display)
         @local_host = request.host
       end
+
     end
   end
 end

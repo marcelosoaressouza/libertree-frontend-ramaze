@@ -8,5 +8,7 @@ module Libertree
     ['zh_CN', '中文（简体）'],
     ['hu_HU', 'magyar'],
     ['ru_RU', 'Русский'],
+    ['es_ES', 'Español'],
+    ['it_IT', 'Italiano'],
   ]
 end

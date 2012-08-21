@@ -1,1002 +1,1016 @@
 # 
 # Translators:
-#   <danielwine@gmail.com>, 2012.
+#   <lunachik@zoho.com>, 2012.
+#   <simbobo@cooptel.net>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Libertree\n"
 "Report-Msgid-Bugs-To: http://issues.libertreeproject.org/\n"
 "POT-Creation-Date: 2010-06-08 10:12+0300\n"
-"PO-Revision-Date: 2012-08-18 10:16+0000\n"
-"Last-Translator: danielwine <danielwine@gmail.com>\n"
-"Language-Team: Hungarian (http://www.transifex.com/projects/p/libertree/language/hu/)\n"
+"PO-Revision-Date: 2012-08-19 08:45+0000\n"
+"Last-Translator: LunaChik <lunachik@zoho.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/libertree/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: view/login.xhtml
 msgid "Username"
-msgstr "Azonosító"
+msgstr "Nombre de usuario"
 
 msgid "Password"
-msgstr "Jelszó"
+msgstr "Contraseña"
 
 msgid "Login"
-msgstr "Bejelentkezés"
+msgstr "Abrir Sesión"
 
 msgid "Not a member yet?"
-msgstr "Még nem vagy tag?"
+msgstr "¿Aún no es miembro?"
 
 # "Sign up now" is wrapped in a link
 msgid "Sign up now!"
-msgstr "Iratkozz fel most!"
+msgstr "¡Regístrate ahora!"
 
 msgid "Forgot your credentials?"
-msgstr "Elfelejtetted az azonosítóidat?"
+msgstr "¿Has olvidado tus credenciales?"
 
 msgid ""
 "You can %sreset your password%s if your account has an email address on "
 "record."
-msgstr "%sVisszaállíthatod a jelszavadat%s, ha korábban megadtad az e-mail címedet."
+msgstr "Puedes %sreinicializar tu constreña%s si tu cuenta tiene una dirección de email en archivo."
 
 #: controller/main.rb
 msgid "Invalid credentials."
-msgstr "Érvénytelen azonosítók."
+msgstr "Credenciales Inválidos"
 
 msgid "A valid invitation code is required."
-msgstr "Érvényes meghívó jelsor szükségeltetik!"
+msgstr "Un código válido de invitación es obligatorio."
 
 msgid "This invitation code has already been used. Try another one!"
-msgstr "Ezt a meghívó jelsort már felhasználták. Próbálj meg egy másikat!"
+msgstr ""
 
 msgid "You mistyped your password."
-msgstr "Elgépelted a jelszavadat."
+msgstr "No escribies a máquina tu constreña corectamente."
 
 msgid "Username %s is taken.  Please choose another."
-msgstr "Ez az azonosító (%s) már foglalt. Kérlek válassz másikat!"
+msgstr "Nombre de usario %s está tomado.  Por favor, escoge un otro."
 
 msgid ""
 "Username must be at least 2 characters long and consist only of lowercase "
 "letters, numbers, underscores and dashes."
-msgstr "Az azonosítónak legalább 2 jel hosszúságúnak kell lennie és kizárólag kisbetűkből, számokból, aláhúzás- valamint kötőjelből állhat."
+msgstr "El nombre de usario tiene que estar más que 2 caracteres y consiste solamente de letras minúsculas, números,  guiones bajos  y guiones."
 
 msgid ""
 "A password reset link has been sent for the account with that email address."
-msgstr "Elküldtük a jelszó-visszaállító linket az e-mail címedre."
+msgstr "Un hipervinculo para recover constreña se ha enviado por la cuenta con ese dirección de email. "
 
 msgid "You have been logged out."
-msgstr "Kijelentkeztél."
+msgstr "Tu sesión está cerrado."
 
 #: controller/base.rb
 msgid "not-authenticated|Please log in."
-msgstr "Kérlek jelentkezz be!"
+msgstr "Por favor, abre sesión."
 
 #: controller/invitations.rb
 msgid ""
 "Failed to create invitation.  You may only have up to 5 unaccepted "
 "invitations at once."
-msgstr "Nem sikerült létrehozni a meghívót. Egyszerre csak 5 függőben lévő meghívód lehet."
+msgstr "Lo hace falta crear una invitación. Solamente puede tener no más que 5 invitaciones que nadie aceptó en la misma vez. "
 
 #: view/home/index.xhtml
 msgid "River:"
-msgstr "Folyó:"
+msgstr "Río"
 
 msgid "manage rivers"
-msgstr "folyamok rendezése"
+msgstr "administrar los ríos"
 
 #: view/home/_menu.xhtml
 msgid "by post time"
-msgstr "közzététel ideje szerint"
+msgstr "por tiempo de publicar"
 
 msgid "by update time"
-msgstr "frissítés ideje szerint"
+msgstr "por tiempo de actualizar"
 
 msgid "mark all read"
-msgstr "mindent olvasottnak jelöl"
+msgstr "marcar toda como leída"
 
 #: view/posts/new.xhtml
 msgid "New Post"
-msgstr "új bejegyzés"
+msgstr "Publicación Nueva"
 
 msgid "(enter hashtags here)"
-msgstr "(írj ide címkéket)"
+msgstr "(entrar hashtags aquí)"
 
 msgid "new-post|Post"
-msgstr "küldés"
+msgstr "Publicación"
 
 #: view/comments/_comments.xhtml, view/posts/{new,edit}.xhtml
 msgid "post|Preview"
-msgstr "előnézet"
+msgstr "Preensenar"
 
 msgid "Visibility"
-msgstr "Láthatóság"
+msgstr "Visibilidad"
 
 msgid "visibility|Internet"
-msgstr "világháló"
+msgstr "La Red"
 
 msgid "visibility|Forest"
-msgstr "erdő"
+msgstr "Bosque"
 
 #: helper/post.rb
 msgid "This post and its comments are visible to the whole Internet"
-msgstr "A bejegyzés és hozzászólásai az egész világhálón láthatóak"
+msgstr "Esta publicación y sus comentarios son visible a todo de la Red."
 
 msgid ""
 "This post and its comments are only visible to members of this Libertree "
 "forest"
-msgstr "A bejegyzést és hozzászólásait csak ennek az erdőnek a tagjai láthatják"
+msgstr "Esta publicación y sus comentarios son solamente visible a miembros de este bosque de Libertree."
 
 #: view/posts/edit.xhtml
 msgid "Edit Post"
-msgstr "szerkesztés"
+msgstr "Editar Publicación"
 
 msgid "Cancel"
-msgstr "mégsem"
+msgstr "Cancelar"
 
 msgid "post|Update"
-msgstr "frissítés"
+msgstr "Actualizar"
 
 #: view/posts/show.xhtml
 msgid "Start receiving notifications about comments on this post"
-msgstr "szeretnék értesítéseket kapni a bejegyzés hozzászólásairól"
+msgstr "Empieza recibir notificaciones de los comentarios de esta publicación"
 
 msgid "subscribe"
-msgstr "feliratkozás"
+msgstr "subscribir"
 
 msgid "Stop receiving notifications about comments on this post"
-msgstr "nem szeretnék többé értesítéseket kapni a bejegyzés hozzászólásairól"
+msgstr "Parar recibir notificaciones de los comentarios de esta publicación"
 
 msgid "unsubscribe"
-msgstr "leiratkozás"
+msgstr "no subscribir"
 
 msgid "mark post unread"
-msgstr "olvasatlannak jelölés"
+msgstr "marcar publicación como no leída"
 
 msgid "mark post read"
-msgstr "olvasottnak jelölés"
+msgstr "marcar publicación como leída"
 
 msgid "edit"
-msgstr "szerkesztés"
+msgstr "editar"
 
 msgid "delete"
-msgstr "törlés"
+msgstr "suprimir"
 
 msgid "collect"
-msgstr "összegyűjt"
+msgstr "coleccionar"
 
 msgid "unlike"
-msgstr "nem tetszik"
+msgstr "ya no me gusta"
 
 msgid "like"
-msgstr "tetszik"
+msgstr "me gusta"
 
 msgid "likes"
-msgstr "ember kedveli"
+msgstr "les gustas"
 
 #: view/posts/_excerpts.xhtml
 msgid "No more posts."
-msgstr "nincs több bejegyzés."
+msgstr "No más publicaiones."
 
 msgid ""
 "The system is still matching posts with this river. Check in a few minutes "
 "for more posts."
-msgstr "Még rejtőznek további bejegyzések ebben a folyóban. Nézz rá újra pár perc múlva és láss csodát..."
+msgstr "El sistema aún está igualando las publicaciones para este río. Ve en los próximos minutos por más publicaciones."
 
 #: view/posts/_excerpt.xhtml
 msgid "back to top"
-msgstr "vissza az elejére"
+msgstr "regresa al cima"
 
 msgid "Liked by %s"
-msgstr "%s kedveli"
+msgstr "A %s les gusta"
 
 msgid "1 comment by %1$s"
-msgstr "1 hozzászólást írt %1$s"
+msgstr "1 comentario de %1$s"
 
 msgid "%2$d comments by %1$s"
-msgstr "%2$d hozzászólást írt %1$s"
+msgstr "%2$d comentarios de %1$s"
 
 msgid "comments"
-msgstr "hozzászólás"
+msgstr "comentarios"
 
 msgid "comment"
-msgstr "hozzászólás"
+msgstr "comentar"
 
 msgid "mark read"
-msgstr "olvasottnak jelöl"
+msgstr "marcar como leído"
 
 msgid "mark unread"
-msgstr "olvasatlannak jelöl"
+msgstr "marcar como no leído"
 
 msgid ""
 "Hiding a post prevents it from showing in your rivers or triggering "
 "notifications."
-msgstr "A rejtett bejegyzések nem jelennek meg a folyamjaidban és nem érkezik róluk értesítés sem."
+msgstr "Si escondes una publicación, no ves en tus ríos y no recibes notificaciones. "
 
 msgid "hide"
-msgstr "rejtés"
+msgstr "esconder"
 
 msgid "Click to confirm hiding of this post."
-msgstr "Biztosan szeretnéd elrejteni ezt a bejegyzést?"
+msgstr "Hacer un clic para confirmar escondiendo de esta publicación."
 
 msgid "confirm"
-msgstr "igen"
+msgstr "confirmar"
 
 msgid "Collect this post in a pool"
-msgstr "bejegyzés felvétele egy gyűjtőmedencébe"
+msgstr "Colecionar esta publicación en una charca"
 
 msgid "collected"
-msgstr "összegyűjtve"
+msgstr "coleccionado"
 
 msgid "Remove this post from this pool"
-msgstr "bejegyzés eltávolítása ebből a gyűjtőmedencéből"
+msgstr "Eliminar esa publicación de esta charca. "
 
 msgid "remove"
-msgstr "eltávolít"
+msgstr "eliminar"
 
 msgid ""
 "Middle click, Shift-click, or Ctrl-Shift-click to open in new tab/window"
-msgstr "Kattints középső gombbal vagy használj shift-klikket / ctrl-klikket, hogy új fülben / ablakban nyithasd meg"
+msgstr "Clic de medio, Shift-clic, o Ctrl-Shift-clic para abrir en una pestaña/ventana nueva"
 
 msgid "view post"
-msgstr "bejegyzés megtekintése"
+msgstr "ver la publicación"
 
 msgid "show more"
-msgstr "többet mutat"
+msgstr "mostrar más"
 
 msgid "show less"
-msgstr "kevesebbet mutat"
+msgstr "mostrar menos"
 
 #: controller/posts.rb
 msgid "Post may not be empty."
-msgstr "A bejegyzés nem lehet üres."
+msgstr "La publicación no puede ser vácio."
 
 #: controller/pools.rb
 msgid "You already have a pool with that name."
-msgstr "Már van gyűjtőmedencéd ezen a néven."
+msgstr "Ya tienes una charca con ese nombre. "
 
 #: controller/profiles.rb
 msgid "Special characters are not allowed in display names."
-msgstr "Különleges jelek nem szerepelhetnek az evilági nevekben."
+msgstr "Los caracteres especiales no está permitido en los nombres de exhibir."
 
 msgid "Avatar deleted."
-msgstr "A képmásod törölve."
+msgstr "Avatar se ha suprimido."
 
 msgid "Avatar changed."
-msgstr "A képmásod megváltoztatva."
+msgstr "Avatar se ha cambiado."
 
 msgid "Failed to reset avatar."
-msgstr "Nem sikerült visszaállítani a képmásodat."
+msgstr "Avatar no se ha reinicializado."
 
 msgid "Only image files may be used as avatars."
-msgstr "Csak képek használhatóak képmásként!"
+msgstr "Solamente los archivos de imagenes puede usar para avatar."
 
 msgid "Only .png, .jpeg and .gif files may be used as avatars."
-msgstr "Csak .png, .jpeg és .gif állományok használhatóak képmásként."
+msgstr "Solamente los archivos de .png, .jpeg, y .gif pueden usar para avatar."
 
 #: controller/rivers.rb
 msgid "You already have a river for that."
-msgstr "Ehhez már van egy folyód."
+msgstr "Ya tienes un río por eso."
 
 #: view/comments/_comments.xhtml
 msgid "One comment"
-msgstr "egy hozzászólás"
+msgstr "Un comentario"
 
 msgid "%d comments"
-msgstr "%d hozzászólás"
+msgstr "%d comentarios"
 
 msgid "show %smore%s / %sall%s comments"
-msgstr "%stöbbi%s / %sösszes%s hozzászólást mutat"
+msgstr "mostrar %smás%s / %stodos%s comentarios"
 
 msgid "jump-to-comment|Comment"
-msgstr "hozzászól"
+msgstr "Comentar"
 
 msgid "Comment successfully posted."
-msgstr "hozzászólás közzététele sikerült."
+msgstr "El comentario publicó con éxito."
 
 msgid "detach"
-msgstr "leválaszt"
+msgstr "separar"
 
 msgid "attach"
-msgstr "összefűz"
+msgstr "adjuntar"
 
 msgid "Clear"
-msgstr "törlés"
+msgstr "Borrar"
 
 msgid "Comment"
-msgstr "hozzászól"
+msgstr "Comentar"
 
 #: view/comments/_comment.xhtml
 msgid "One like"
-msgstr "egy ember kedveli"
+msgstr "A uno, le gusta"
 
 msgid "%d likes"
-msgstr "%d ember kedveli"
+msgstr "A %d, les gusta"
 
 msgid "back-to-referencing-comment|back"
-msgstr "vissza"
+msgstr "regresar"
 
 msgid "Unlike this comment"
-msgstr "nem tetszik ez a hozzászólás"
+msgstr "No me gusta este comentario"
 
 msgid "Like this comment"
-msgstr "tetszik ez a hozzászólás"
+msgstr "Me gusta este comentario"
 
 msgid "shareable link for this comment"
-msgstr "megosztható link a hozzászóláshoz"
+msgstr "hiperví­nculo para distributir de este comentario "
 
 #: view/_markdown_injector.xhtml
 msgid "markdown|title"
-msgstr "cím"
+msgstr "titulo"
 
 msgid "markdown|subtitle"
-msgstr "alcím"
+msgstr "subtitulo"
 
 msgid "markdown|link"
-msgstr "hivatkozás"
+msgstr "hiperví­nculo"
 
 msgid "markdown|image"
-msgstr "kép"
+msgstr "imagen"
 
 msgid "markdown|image link"
-msgstr "kép-hivatkozás"
+msgstr "hiperví­nculo de imagen"
 
 msgid "markdown|quote"
-msgstr "idézet"
+msgstr "cita"
 
 msgid "markdown|list"
-msgstr "felsorolás"
+msgstr "listo"
 
 msgid "markdown|bold"
-msgstr "kövér"
+msgstr "negrita"
 
 msgid "markdown|italic"
-msgstr "dőlt"
+msgstr "cursiva"
 
 #: view/accounts/edit.xhtml
 msgid "Account Settings"
-msgstr "Beállítások"
+msgstr "Configuración de Cuenta"
 
 msgid "Edit profile"
-msgstr "Bemutatkozásod"
+msgstr "Editar perfil"
 
 msgid "Manage rivers"
-msgstr "Folyamok rendezése"
+msgstr "Administrar ríos"
 
 msgid "Change password"
-msgstr "Jelszó megváltoztatása"
+msgstr "Cambiar constreña"
 
 msgid "Email:"
-msgstr "E-mail:"
+msgstr "Email:"
 
 msgid "(for password recovery; never public)"
-msgstr "(kizárólag jelszó-visszaállításhoz; sosem nyilvános)"
+msgstr "(para recuperar la constreña ; nunca publica)"
 
 msgid "Post excerpt maximum height:"
-msgstr "a bejegyzésminta legnagyobb magassága:"
+msgstr "La altura máxima de extracto de publicación:"
 
 msgid "pixels"
-msgstr "képpont"
+msgstr "pixels"
 
 msgid "Custom menu link:"
-msgstr "Saját menü hivatkozás:"
+msgstr "Hipervínculo del menú personalizado:"
 
 msgid "Custom CSS:"
-msgstr "Saját CSS:"
+msgstr "CSS Personalizada:"
 
 msgid "Custom JS:"
-msgstr "Saját JS:"
+msgstr "JS Personalizada:"
 
 msgid "Automatic embedding:"
-msgstr "Automatikus beágyazás:"
+msgstr "Incrustación de Objetos Automática "
 
 msgid "Make thumbnails for images in post excerpts:"
-msgstr "A bejegyzésmintákban készüljenek a képekhez miniatűrök:"
+msgstr "Hacer las minaturas de imagenes para los imagenes en los extractos de publicaciones:"
 
 msgid "Language:"
-msgstr "Nyelv:"
+msgstr "Idioma:"
 
 msgid "Save"
-msgstr "mentés"
+msgstr "Guardar"
 
 msgid "Invite Others"
-msgstr "Mások meghívása"
+msgstr "Invitar Otros"
 
 msgid "Generate a new invitation"
-msgstr "Új meghívás létrehozása"
+msgstr "Generar una invitación nueva"
 
 msgid "My Invitations"
-msgstr "Meghívásaim:"
+msgstr "Mis Invitaciones"
 
 msgid "Member API"
-msgstr "Tagsági API"
+msgstr "API de miembro"
 
 msgid "Current API token:"
-msgstr "Jelenlegi API token:"
+msgstr "API token actual:"
 
 msgid "(none)"
-msgstr "(nincsen)"
+msgstr "(nada)"
 
 msgid "API documentation"
-msgstr "API dokumentáció"
+msgstr "Documentación de API"
 
 msgid "Generate API token"
-msgstr "API token létrehozása"
+msgstr "Generar API token"
 
 msgid "Data Export"
-msgstr "Adat kivitel"
+msgstr "Exportar Datos"
 
 msgid ""
 "Download your account settings, profile, posts, comments and direct "
 "messages:"
-msgstr "Töltsd le a beállításaidat, adataidat, bejegyzéseidet, hozzászólásaidat és üzeneteidet:"
+msgstr "Descargar tus configuraciones de cuenta, perfil, publicaciones, comentarios y mensajes directos:"
 
 #: controller/accounts.rb
 msgid "Settings saved."
-msgstr "Beállítások elmentve."
+msgstr "Las configuraciones se ha guardadas. "
 
 msgid ""
 "Post excerpt maximum height: Please enter a number greater than or equal to "
 "200, or no number for no maximum."
-msgstr "Bejegyzésminta legnagyobb magassága: Kérlek adj meg egy számot, ami legalább 200, vagy ne adj meg semmit, ha nem szeretnél korlátot."
+msgstr "La altura máxima de los extractos de publicaciones: Por favor, entra un número más que o igual a 200, o no número por no altura máxima."
 
 msgid "Passwords did not match.  Please reenter."
-msgstr "A jelszavak nem egyeznek. Kérlek gépeld be őket újra!"
+msgstr "Las constreñas no igualan.  Por favor, entras de nuevo."
 
 msgid "Password changed."
-msgstr "Jelszó megváltozott."
+msgstr "La constreña se ha  cambiada."
 
 #: view/accounts/change_password.xhtml
 msgid "Change Password"
-msgstr "Jelszó megváltoztatása"
+msgstr "Cambiar Constreña"
 
 msgid "New password:"
-msgstr "Új jelszó:"
+msgstr "Constreña Nueva:"
 
 msgid "Re-enter new password:"
-msgstr "Ismételd meg az új jelszót:"
+msgstr "Entra de nuevo la constreña."
 
 msgid "button|Change Password"
-msgstr "megváltoztat"
+msgstr "Cambiar Constreña"
 
 #: view/notifications/{index,_index}.xhtml
 msgid "Notifications"
-msgstr "Értesítések"
+msgstr "Notificaciones"
 
 msgid "You have no new notifications."
-msgstr "Nincs új értesítésed."
+msgstr "No tienes notificaiones nuevas."
 
 msgid "mark all seen"
-msgstr "mindet olvasottnak jelöl"
+msgstr "marcar todo como leído"
 
 msgid "view all"
-msgstr "mindet megtekint"
+msgstr "ver todo"
 
 msgid "%d more"
-msgstr "%d további értesítés"
+msgstr "%d más"
 
 #: view/notifications/_comment.xhtml
 msgid "%1$s commented on your %2$spost%3$s."
-msgstr "%1$s hozzászólt a %2$sbejegyzésedhez%3$s."
+msgstr "%1$s comentó en tu %2$spublicación%3$s."
 
 msgid "%1$s commented on %2$s's %3$spost%4$s."
-msgstr "%1$s hozzászólt %2$s %3$sbejegyzéséhez%4$s."
+msgstr "%1$s comentó en %2$s's %3$spublicación%4$s."
 
 #: view/notifications/_comment_like.xhtml
 msgid "%1$s liked your %2$scomment%3$s on your post."
-msgstr "%1$s kedveli a saját bejegyzésedhez fűzött %2$shozzászólásodat%3$s."
+msgstr "A %1$s le gustó %2$scomentario%3$s en tu publicación."
 
 msgid "%1$s liked your %2$scomment%3$s on %4$s's post."
-msgstr "%1$s kedveli a %4$s bejegyzéséhez fűzött %2$shozzászólásodat%3$s ."
+msgstr "A %1$s le gusta tu %2$scomentario%3$s en %4$s's publicación."
 
 #: view/notifications/_post_like.xhtml
 msgid "%1$s liked your %2$spost%3$s."
-msgstr "%1$s kedveli a %2$sbejegyzésedet%3$s."
+msgstr "A %1$s le gusta tu %2$spublicación%3$s."
 
 # TODO: positional placeholders
 #: view/notifications/_message.xhtml
 msgid "%1$s sent you a %2$smessage%3$s."
-msgstr "%1$s küldött neked egy %2$süzenetet%3$s."
+msgstr "%1$s te envió un %2$smensaje%3$s."
 
 #: helper/wording.rb, view/messages/show.xhtml
 msgid "list-comma|, "
 msgstr ","
 
 msgid "list-and| and "
-msgstr " és"
+msgstr "y"
 
 #: helper/age.rb
 msgid "1 day ago"
-msgstr "1 napja"
+msgstr "hace 1 día"
 
 msgid "%d days ago"
-msgstr "%d napja"
+msgstr "hace %d días"
 
 msgid "1 hour ago"
-msgstr "1 órája"
+msgstr "hace 1 hora"
 
 msgid "%d hours ago"
-msgstr "%d órája"
+msgstr "hace %d horas"
 
 msgid "1 minute ago"
-msgstr "1 perce"
+msgstr "hace 1 minuto"
 
 msgid "%d minutes ago"
-msgstr "%d perce"
+msgstr "hace %d minutos"
 
 msgid "seconds ago"
-msgstr "néhány másodperce"
+msgstr "hace segundos"
 
 #: view/search.xhtml
 msgid "Search Results for \"%s\""
-msgstr "\"%s\" keresési eredményei"
+msgstr "Los Resultados de Buscar \"%s\""
 
 msgid "search-results|Nothing found."
-msgstr "Sajnos nem találtunk semmit :("
+msgstr "Nada encontré."
 
 msgid "search-results|Profiles"
-msgstr "Bemutatkozások"
+msgstr "Perfiles"
 
 msgid "search-results|Posts"
-msgstr "Bejegyzések"
+msgstr "Publicaciones"
 
 msgid "search-results|Comments"
-msgstr "Hozzászólások"
+msgstr "Comentarios"
 
 #: controller/contact-lists.rb
 msgid "Contact list updated."
-msgstr "Társjegyzék frissítve"
+msgstr "El listo de contactos se ha actualizado."
 
 msgid "Contact list name may not be empty."
-msgstr "Társjegyzék neve nem lehet üres."
+msgstr "El nombre del listo de contactos no puede ser vácio."
+
+msgid "The contact list &ldquo;%s&rdquo; has been deleted."
+msgstr ""
 
 #: view/contact-lists/index.xhtml
 msgid "Contact Lists"
-msgstr "Társak jegyzékei"
+msgstr "Listos de Contactos"
 
-msgid "new-contact-list|Name:"
-msgstr "Név:"
+msgid "contact-list|Name:"
+msgstr ""
 
 msgid "new-contact-list|Create"
-msgstr "létrehozás"
+msgstr "Crear"
+
+msgid "contact-list|delete"
+msgstr ""
 
 #: view/contact-lists/show.xhtml
 msgid "Contact List: %s"
-msgstr "Társjegyzék: %s"
+msgstr "Listo de Contactos: %s"
 
 msgid "(choose members)"
-msgstr "(válassz valakit)"
+msgstr "(escoge miembros)"
 
 msgid "contact-list|Save"
-msgstr "mentés"
+msgstr "Guardar"
 
 msgid "contact-list|Cancel"
-msgstr "mégsem"
+msgstr "Cancelar"
 
 #: controller/admin/base.rb
 msgid "Administrative privileges required."
-msgstr "Karbantartói jogosultságok szükségeltetnek."
+msgstr "Los privilegios de administrativos son obligatorios."
 
 #: controller/admin/forests.rb
 msgid "The tree is already a member of the forest."
-msgstr "Ez a fa már tagja az erdőnek."
+msgstr "El árbol ya es un miembro del bosque."
 
 #: view/admin/index.xhtml
 msgid "Libertree Administration"
-msgstr "Libertree gondozás / karbantartás"
+msgstr "La Administración de Libertree"
 
 msgid "Forests"
-msgstr "Erdők"
+msgstr "Bosques"
 
 msgid ""
 "Drag trees in and out of forests.  The local tree is automatically a part of"
 " each forest originating from it."
-msgstr "Húzz át és vissza az erdőbe fákat. A jelen fa eleve része annak az erdőnek, melyből ered."
+msgstr "Arrastra y coloca los arboles a los bosques y de los bosques. El árbol local es automáticament un parte de cada bosque se origina. "
 
 msgid "create-forest|Name:"
-msgstr "Név:"
+msgstr "Nombre:"
 
 msgid "create-forest|Add"
-msgstr "hozzáadás"
+msgstr "Sumar"
 
 msgid "forest|Origin:"
-msgstr "Eredet:"
+msgstr "Origen:"
 
 msgid "forest-origin|this tree"
-msgstr "a jelen fa"
+msgstr "este árbol"
 
 msgid "Trees"
-msgstr "Fák"
+msgstr "Árboles"
 
 msgid "new-tree|Hostname:"
-msgstr "Gazdarendszer neve:"
+msgstr "Nombre de Servidor:"
 
 msgid "new-tree|Add"
-msgstr "hozzáadás"
+msgstr "Adjuntar"
 
 #: view/404.xhtml
 msgid "404|No such page"
-msgstr "Nincs ilyen oldal"
+msgstr "404|La página no existe."
 
 msgid ""
 "404|Please use your browser's Back button, or %sgo to your home page%s."
-msgstr "Kérlek használd a böngésződ 'vissza' gombját, vagy %sugorj a kezdőlapodra%s."
+msgstr "404|Por favor, usa tu botón de átras, o %sgo vaya a tu página inicial%s."
 
 #: view/error.xhtml
 msgid "Something went wrong..."
-msgstr "Valami zűr történt..."
+msgstr "Algo fue incorecto..."
 
 msgid "Time of error: %s"
-msgstr "A hiba ideje: %s"
+msgstr "El tiempo del error: %s"
 
 msgid "Referrer: %s"
-msgstr "Hivatkozó: %s"
+msgstr "Persona quien te referido: %s"
 
 #: view/messages/{index,show}.xhtml
 msgid "Direct Messages"
-msgstr "Közvetlen üzenetek"
+msgstr "Mensajes Directos"
 
 msgid "direct-message|New Message"
-msgstr "Új üzenet"
+msgstr "Mensaje Nuevo"
 
 msgid "direct-message|Messages"
-msgstr "Üzenetek"
+msgstr "Mensajes"
 
 msgid "direct-message|From:"
-msgstr "Feladó:"
+msgstr "De:"
 
 msgid "direct-message|To:"
-msgstr "Címzett:"
+msgstr "A:"
 
 #: view/messages/_new.xhtml
 msgid "direct-message|Send"
-msgstr "küldés"
+msgstr "Enviar"
 
 msgid "direct-message|Preview"
-msgstr "előnézet"
+msgstr "Preensenar"
 
 msgid "direct-message|Recipients"
-msgstr "címzettek"
+msgstr "Destinatarios"
 
 msgid "direct-message-warning|please note..."
-msgstr "kérlek vedd tekintetbe..."
+msgstr "por favor toma nota..."
 
 msgid ""
 "Please note that direct messages are not fully private, encrypted nor "
 "secure.  As with all data on this tree, direct messages are fully accessible"
 " to the arborista (administrator)."
-msgstr "kérlek vedd tekintetbe, hogy a közvetlen üzenetek nem teljesen egészében magánjellegűek vagy biztonságosak. Miképp minden adat ezen a fán, a közvetlen üzenetek is teljes mértékben hozzáférhetőek a botanikusok (karbantartók) számára."
+msgstr "Por favor nota que los mensajes directos no son privado completemente, encriptado, ni seguro.  Como con todos los datos en este árbol, los mensajes directos son accesible al arborista (administrador)."
 
 #: view/messages/show.xhtml
 msgid "direct-message|reply"
-msgstr "válasz"
+msgstr "responder"
 
 msgid "direct-message|reply to all"
-msgstr "válasz mindenkinek"
+msgstr "responder a todos"
 
 #: view/pools/_index.xhtml
 msgid "pool-selector|Collect in..."
-msgstr "összegyűjtés ide..."
+msgstr "Colecciona en..."
 
 #: view/pools/index.xhtml
 msgid "Pools"
-msgstr "Medencék"
+msgstr "Charcas"
 
 msgid "Use pools to collect posts."
-msgstr "Bejegyzések összegyűjtéséhez használj medencéket."
+msgstr "Usa las charcas para colecionar publicaciones."
 
-msgid "new-pool|Name:"
-msgstr "Név:"
+msgid "pool|Name:"
+msgstr ""
 
 msgid "new-pool|Create"
-msgstr "létrehozás"
+msgstr "Crear:"
 
 msgid "pool|Delete"
-msgstr "törlés"
+msgstr "Suprimir"
 
 #: view/pools/show.xhtml
 msgid "Pool: %s"
-msgstr "medence: %s"
+msgstr "Charca: %s"
+
+#: view/pools/edit.xhtml
+msgid "Edit Pool: %s"
+msgstr ""
+
+msgid "pool|Update"
+msgstr ""
 
 #: view/profiles/edit.xhtml
 msgid "My Profile"
-msgstr "Bemutatkozásom"
+msgstr "Mi Perfil"
 
 msgid "Display name:"
-msgstr "Evilági neved (ami megjelenik):"
+msgstr "Nombre de exhibir:"
 
 msgid "About Me (Markdown allowed):"
-msgstr "Ez vagyok én (markdown jelsor is használható):"
+msgstr "Sobre Yo (Markdown se permite):"
 
 msgid "profile|Update"
-msgstr "frissítés"
+msgstr "Actualizar"
 
 msgid "Avatar"
-msgstr "Képmás"
+msgstr "Avatar"
 
 msgid "avatar|Upload file:"
-msgstr "Kép feltöltése"
+msgstr "Subir archivo:"
 
 msgid "avatar-upload|Submit"
-msgstr "elküldés"
+msgstr "Someter"
 
 msgid "Reset avatar"
-msgstr "Képmás visszaállítása"
+msgstr "Reinicializar avatar"
 
 #: view/profiles/show.xhtml
 msgid "profile|Edit"
-msgstr "szerkesztés"
+msgstr "Editar"
 
 msgid "Posts by %s"
-msgstr "%s bejegyzései"
+msgstr "Publicaciones de %s"
 
 msgid "Add %s to a river"
-msgstr "%s hozzáadása egy folyóhoz"
+msgstr "Sumar %s a un río"
 
 #: view/request_password_reset.xhtml
 msgid "Password Reset"
-msgstr "Jelszó visszaállítása"
+msgstr "Reinicializar constreña"
 
 msgid ""
 "To reset your password, enter the email address associated with your "
 "account."
-msgstr "A jelszavad visszaállításához add meg az oldalhoz társított levelezési címedet."
+msgstr "Para reinicializar tu constreña, entra la dirección de email que está asociado con tu cuenta."
 
 msgid "password-reset|Submit"
-msgstr "rendben"
+msgstr "Someter"
 
 #: view/signup.xhtml
 msgid "Create a New Account"
-msgstr "Új tagság létrehozása"
+msgstr "Crear una Cuenta Nueva"
 
 msgid "Invitation code:"
-msgstr "Meghívási jelsor:"
+msgstr "Código de invitación:"
 
 msgid "Username:"
-msgstr "Azonosító:"
+msgstr "Nombre de usario:"
 
 msgid "Password:"
-msgstr "Jelszó:"
+msgstr "Constreña:"
 
 msgid "Confirm password:"
-msgstr "Jelszó megerősítése:"
+msgstr "Confirma constreña:"
 
 msgid "(optional)"
-msgstr "(nem kötelező)"
+msgstr "(opcional)"
 
 msgid "button|Sign up"
-msgstr "Feliratkozás"
+msgstr "Registrar"
 
 #: view/rivers/{new,edit}.xhtml
 msgid "Edit River"
-msgstr "folyam szerkesztése"
+msgstr "Editar el Río"
 
 msgid "river-query|Search:"
-msgstr "Keresés:"
+msgstr "Buscar:"
 
 msgid "river|Label:"
-msgstr "Címke:"
+msgstr "Etiqueta:"
 
 msgid "append to all other rivers"
-msgstr "hozzáfűzés a többi folyóhoz"
+msgstr "adjuntar a todos los otros ríos"
 
 msgid "river|Update"
-msgstr "frissítés"
+msgstr "Actualizar"
 
 msgid "river|Create"
-msgstr "létrehozás"
+msgstr "Crear"
 
 #: view/rivers/index.xhtml
 msgid "My Rivers"
-msgstr "Folyóim"
+msgstr "Mis Ríos"
 
 msgid "new river"
-msgstr "Új folyam"
+msgstr "río nuevo"
 
 msgid "river|Global Queries"
-msgstr "Általános lekérdezések"
+msgstr "Búsqueda Globales"
 
 msgid ""
 "The following river queries are being appended to every other river query."
-msgstr "A következő folyam-lekérdezések hozzá lesznek fűzve a többihez."
+msgstr "Las búsquedas del río siguientes están adjuntando a todas las otras búsquedas del río.  "
 
 #: view/rivers/_list.xhtml
 msgid "(home river)"
-msgstr "(hazai folyó)"
+msgstr "(río inicio)"
 
 msgid "Set as home river"
-msgstr "Legyen ez a hazai folyó"
+msgstr "Establecer como el río inicio."
 
 msgid "river|edit"
-msgstr "szerkesztés"
+msgstr "editar"
 
 msgid "river|delete"
-msgstr "törlés"
+msgstr "suprimir"
 
 #: view/rivers/_tips_and_examples.xhtml
 msgid "river-tips|Tips:"
-msgstr "Tanácsok:"
+msgstr "Consejos:"
 
 msgid "For the search, enter one or more words or hashtags."
-msgstr "A kereséshez adj meg egy vagy több szót, illetve címkét."
+msgstr "Para buscar, entra uno o más palabras o hashtags."
 
 msgid "Posts having any of the words will be included in the river."
-msgstr "Azok a bejegyzések, melyek a szavak bármelyikét tartalmazzák, meg fognak jelenni ebben a folyóban."
+msgstr "Las publicaciones que tienen algunas de las palabras estarán incluido en el río. "
 
 msgid "Use a minus sign in front of a word to exclude posts with that word."
-msgstr "Használj egy kivonás jelet valamely szó előtt, ha azt szeretnéd, hogy az adott szót tartalmazó bejegyzés ne jelenjen meg."
+msgstr "Usa un guión enfrente de una palabra para excluir las publicaciones con esa palabra."
 
 msgid ""
 "Example: %s#music -#classical%s will find posts about music, but not "
 "classical music."
-msgstr "Példa: a %s#zene -#klasszikus%s eredménye lesz minden zenei bejegyzés kivéve azokat, amik klasszikusként vannak felcímkézve."
+msgstr "Ejemplo: %s#music -#classical%s encontrarán publicaciones de música, pero no música clásica."
 
 msgid "Example: %s:river \"Special Interests\"%s"
-msgstr "Példa: %s:folyó \"érdeklődési körök\"%s"
+msgstr "Ejemplo: %s:river \"Intereses Especiales\"%s"
 
 msgid ""
 "Other special terms: %s, %s and %s. These are for narrowing down to posts "
 "you have liked, commented on and subscribed to, respectively."
-msgstr "Egyéb különleges kifejezések: %s, %s and %s. Ezek leszűkítik a keresést azokra a bejegyzésekre, melyeket kedveltél, melyekhez hozzászóltál, vagy amelyekre feliratkoztál."
+msgstr "Otros Términos Especiales: %s, %s, and %s. Estos son para limitar a publicaciones que te gusta, comentaste en, y subscribiste a, respectivamente."
 
 msgid ""
 "(advanced) Use the special term %s followed by a river label in quotes to "
 "compose rivers using other rivers."
-msgstr "(haladóknak) Használd a %s különleges jelet valamely folyam címkéje után idézőjelben, hogy létrehozz olyan folyamokat, amelyek más folyamokból tevődnek össze"
+msgstr "(avanzado) Usa el término espcial %s seguido de una etiqueta del río en comillas para composer ríos usando otros ríos. "
 
 msgid "You can also %shave the beginner rivers recreated for you%s."
-msgstr "Akár %sa kiindulási folyót is visszaállíttathatod%s."
+msgstr "Puedes %sreinicializar los ríos predeterminado para ti%s."
 
 msgid "river|Examples"
-msgstr "Példák"
+msgstr "Ejemplos"
 
 msgid "river|Query"
-msgstr "a lekérdezés mintája"
+msgstr "Búsqueda"
 
 msgid "river|Description"
-msgstr "jelentése"
+msgstr "Descripción"
 
 msgid "All posts originating from your tree"
-msgstr "Minden bejegyzés, ami a te fádtól ered"
+msgstr "Todas de publicaciones se origen de tu árbol"
 
 msgid ""
 "All posts transmitted to your tree from every other tree in the forest, plus"
 " posts from your tree"
-msgstr "Minden bejegyzés, amelyet az erdő többi fája adott tovább a te fádnak"
+msgstr "Todas de publicaciones trasmitieron a tu árbol de todos los otras arboles en el bosque, y publicaciones de tu árbol. "
 
 msgid ""
 ":unread #knitting%sPosts tagged with %s#knitting%s which you have not read "
 "yet"
-msgstr ":unread #kötés%sAzok a %s#kötés%s címkéjű bejegyzések, melyeket még nem olvastál el."
+msgstr ":unread #knitting%sLas publicaciones etiquetaron con %s#knitting%s cuales ya no leído"
 
 msgid ""
 "#funny -#cats -#lolcats%sPosts tagged %s#funny%s, but not including posts "
 "about cats"
-msgstr "#állatok -#macskák -#cicák%sAzok a bejegyzések, melyeket %s#állatok%s címkével illettek, de nem beleértve a macskákkal kapcsolatosakat"
+msgstr "#funny -#cats -#lolcats%sLas publicaciones etiquetaron con %s#funny%s, pero no tiene publicaciones sobre gatos"
 
 msgid ""
 "environment%sPosts that mention the environment, whether or not they were "
 "hashtagged with #environment"
-msgstr "környezet%sOlyan bejegyzések, amik megemlítik a környezet szót, attól függetlenül, hogy fel vannak címkézve (# jellel) vagy nincsenek"
+msgstr "environment%sLas publicaciones que mencionan el ambiente, si o no tiene la etiqueta #environment"
 
 msgid ""
 ":tree #bug #feature%sBug reports and feature requests made by your treemates"
-msgstr ":tree #hiba #javaslat%sOlyan hibajelentések és fejlesztési javaslatok, amelyeket olyanok írtak, akik ugyanahhoz a fához tartoznak, mint te"
+msgstr ":tree #bug #feature%sLos reportes de error y peticiones por características se hecho de tus compañeros del árbol"
 
 msgid ""
 "\"new york\"%sPosts about New York, but not posts only having the word "
 "%snew%s"
-msgstr "\"Fertő tó\"%sBejegyzések a Fertő tóról (nem fognak szerepelni azok, amelyekben csak a %stó%s szó fordul elő)"
+msgstr "\"new york\"%sLas publicaciones de Nueva York, pero no publicaciones que solamente tiene la palabra %snew%s"
 
 msgid ""
 "brazil -\"world cup\"%sPosts about Brazil, but not those mentioning the "
 "World Cup"
-msgstr "brazil -\"világbajnokság\"%sBejegyzések Brazíliáról, kivéve azokat, amik a világbajnokságot is megemlítik"
+msgstr "brazil -\"world cup\"%sLas publicaciones de Brazil, pero nada que menciona el World Cup "
 
 msgid ":from \"rekado\"%sPosts written by rekado"
-msgstr ":from \"rekado\"%sRekado által írt bejegyzések"
+msgstr ":from \"rekado\"%sLas publicaciones escrito de rekado"
 
 msgid ""
 "#photography -:from \"Photophile\"%sPosts tagged with %s#photography%s, but "
 "not those by Photophile"
-msgstr "#fényképezés -:from \"Fotoscsabi\"%sOlyan bejegyzések, melyek %s#fényképezés%s címkével vannak megjelölve, kivéve azokat, amik Fotoscsabitól származnak"
+msgstr "#photography -:from \"Photophile\"%sLas publicaciones etiqutaron con %s#photography%s, pero nada de Photophile"
 
 msgid ""
 "#restaurants :river \"Important\"%sPosts tagged with %s#restaurants%s, or "
 "posts matching the river \"Important\""
-msgstr "#éttermek :river \"Fontos\"%sAzok a bejegyzések amik %s#éttermek%s címkével vannak jelölve vagy azok, amik a \"Fontos\" folyamból valóak"
+msgstr "#restaurants :river \"Important\"%sPublicaciones etiquetaron con %s#restaurants%s, o las publicaciones que igualan el río se llama \"Important\""
 
 msgid ""
 "#restaurants +:river \"News Articles\"%sPosts tagged with %s#restaurants%s "
 "which also match the river \"News Articles\""
-msgstr "#éttermek +:river \"Újságcikkek\"%sAz %s#éttermek%s címkével jelölt bejegyzések, melyek az \"Újságcikkek\" folyamban is megtalálhatóak"
+msgstr "#restaurants +:river \"News Articles\"%sLas publicaciones etiquetaron con %s#restaurants%s cuales tambien igualan el río se llama \"News Articles\""
 
 msgid ""
 "#restaurants -:river \"International News\"%sPosts tagged with "
 "%s#restaurants%s, but not those which match the river \"International News\""
-msgstr "#éttermek -:river \"Nemzetközi hírek\"%sBejegyzések, melyek az %s#éttermek%s címkével vannak megjelölve, kivéve azokat amik a \"Nemzetközi hírek\" nevű folyamban találhatóak"
+msgstr "#restaurants -:river \"International News\"%sLas publicaciones etiquetaron con %s#restaurants%s, pero nada que igualan el río se llama \"International News\""
 
 #: view/chat/_index.xhtml
 msgid "Chat"
-msgstr "Csevej"
+msgstr "Chat"
 
 msgid "chat-contacts|Online:"
-msgstr "jelen van:"
+msgstr "En Línea"
 
 msgid "chat|(no contacts online)"
-msgstr "(egyetlen társ sincs jelen)"
+msgstr "(no contactos en línea)"
 
 msgid "Start new chat with..."
-msgstr "Csevegés kezdése vele..."
+msgstr "Empieza un chat nuevo con..."
 
 #: layout/_menu.xhtml
 msgid "menu|Profile"
-msgstr "Megjelenésed"
+msgstr "Perfil"
 
 msgid "menu|Settings"
-msgstr "Beállítások"
+msgstr "Configuraciones"
 
 msgid "menu|Contact Lists"
-msgstr "Társjegyzék"
+msgstr "Listos de contacto"
 
 msgid "menu|Pools"
-msgstr "Medencék"
+msgstr "Charcas"
 
 msgid "menu|Legible font size"
-msgstr "olvasható betűméret"
+msgstr "Tamaño de fuente legible"
 
 msgid "menu|Small font size"
-msgstr "kis betűméret"
+msgstr "Tamaño de fuente pequeño"
 
 msgid "menu|legible"
-msgstr "olvasható"
+msgstr "legible"
 
 msgid "menu|small"
-msgstr "kicsi"
+msgstr "pequeño"
 
 msgid "menu|Currently in &quot;small display&quot; mode; click to change"
-msgstr "Jelenleg &quot;kis kijelző&quot; üzemmódban vagy; kattints a változtatáshoz"
+msgstr "Actualmente está en la moda por las pantallas pequeñas; hace clic para cambiar"
 
 msgid "menu|Currently in &quot;large display&quot; mode; click to change"
-msgstr "Jelenleg &quot;nagy kijelző&quot; üzemmódban vagy; kattints a változtatáshoz"
+msgstr "Actualmente está en la moda por las pantallas grandes; hace clic para cambiar"
 
 msgid "menu|Large display"
-msgstr "Nagy kijelző"
+msgstr "Pantalla Grande"
 
 msgid "menu|Small display"
-msgstr "Kis kijelző"
+msgstr "Pantalla Pequeña"
 
 msgid "menu|Administrate"
-msgstr "Karbantartás"
+msgstr "Administrar"
 
 msgid "menu|Log out"
-msgstr "Kilépés"
+msgstr "Cerrar sesión"
 
 msgid "menu|Go Home"
-msgstr "Irány haza"
+msgstr "Vas al Inicio"
 
 msgid "menu|You are at Home"
-msgstr "Otthon vagy"
+msgstr "Estás al Inicio"
 
 msgid "menu|New Post"
-msgstr "Új bejegyzés"
+msgstr "Publicación Nueva"
 
 msgid "menu|Known Issues"
-msgstr "Ismert hibák"
+msgstr "Problemas Conocidos"
 
 #: layout/_notifications.xhtml
 msgid "No notifications"
-msgstr "nincs értesítés"
+msgstr "No notificaciones"
 
 msgid "1 notification"
-msgstr "1 értesítés"
+msgstr "1 notificación"
 
 msgid "%d notifications"
-msgstr "%d értesítés"
+msgstr "%d notificaciones"
 
 #: layout/_chat.xhtml
 msgid "1 unread chat message from %1$s"
-msgstr "%1$s csevegőtársad írt egy új üzenetet"
+msgstr "1 mensaje de chat que no leído de %1$s"
 
 msgid "%2$d unread chat messages from %1$s"
-msgstr "%1$s csevegőtársad %2$d új üzenetet írt"
+msgstr "%2$d mensajes de chat que no leído de %1$s"

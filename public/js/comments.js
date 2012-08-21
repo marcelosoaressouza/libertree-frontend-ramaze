@@ -52,6 +52,13 @@ function insertCommentHtmlFor( postId, commentId ) {
   );
 }
 
+function hideLoadCommentsLinkIfAllShown(element) {
+  var n = parseInt( element.find('.num-comments').text() );
+  if( element.find('div.comment').length == n ) {
+    element.find('a.load-comments').hide();
+  }
+};
+
 /* ---------------------------------------------- */
 
 $(document).ready( function() {
@@ -59,6 +66,7 @@ $(document).ready( function() {
     event.preventDefault();
     showMoreComments( $(this).closest('.comments'), $(this).data('n') );
   } );
+
   $('.jump-to-comment').live( 'click', function(event) {
     event.preventDefault();
     var comments = $(this).closest('div.comments');
@@ -71,6 +79,46 @@ $(document).ready( function() {
       }
     );
   } );
+
+  $('a.load-comments').live( 'click', function(event) {
+    event.preventDefault();
+
+    var post = $(this).closest('.post, .post-excerpt');
+    var postId = post.data('post-id');
+    var toId = post.find('.comments .comment:first').data('comment-id');
+
+    insertSpinnerBefore('.comments .comment:first', 16);
+    $.get(
+      '/comments/_comments/'+postId+'/'+toId+'/'+post.find('.num-comments').data('n'),
+      function(html) {
+        if( $.trim(html).length == 0 ) {
+          return;
+        }
+        var o = $(html);
+        var searchableContainer = $('<div></div>');
+        searchableContainer.append(o);
+        var numCommentsSpan = searchableContainer.find('span.num-comments.hidden').clone();
+        post.find('span.num-comments').replaceWith(numCommentsSpan);
+        numCommentsSpan.removeClass('hidden');
+
+        var scrollable = $('div.comments-pane');
+        if( $('.excerpts-view').length ) {
+          scrollable = $('html');
+        }
+        var initialScrollTop = scrollable.scrollTop();
+        var initialHeight = scrollable.find('div.comments:first').height();
+        o.insertBefore('.comments .comment:first');
+        var delta = scrollable.find('div.comments:first').height() - initialHeight;
+
+        scrollable.scrollTop( initialScrollTop + delta );
+        hideLoadCommentsLinkIfAllShown(post);
+        removeSpinner('.comments');
+      }
+    );
+
+    return false;
+  } );
+
   $('div.comment').live( {
     mouseover: function() {
       $(this).find('.comment-tools').css('visibility', 'visible');
@@ -79,6 +127,7 @@ $(document).ready( function() {
       $(this).find('.comment-tools').css('visibility', 'hidden');
     }
   } );
+
   $('.comment .delete').live( 'click', function(event) {
     event.preventDefault();
     if( confirm('Delete this comment?') ) {
@@ -231,5 +280,8 @@ $(document).ready( function() {
   match = document.URL.match(/#comment-([0-9]+)/);
   if( match ) {
     window.location = window.location;  /* Hack for Firefox */
+    $('a.load-comments').click();
   }
+
+  hideLoadCommentsLinkIfAllShown( $('.post') );
 } );

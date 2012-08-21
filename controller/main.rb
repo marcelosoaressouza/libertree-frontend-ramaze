@@ -42,6 +42,8 @@ module Controller
       if request.post?
         a = account_login( request.subset('username', 'password') )
         if a
+          session[:saved_text] = Hash.new
+          session[:chats_closed] = Set.new
           if $post_login_path
             # Used in spec suite
             redirect $post_login_path
@@ -60,6 +62,8 @@ module Controller
     end
 
     def logout
+      session[:saved_text] = nil
+      session[:chats_closed] = nil
       account_logout
       flash[:notice] = _('You have been logged out.')
       redirect r(:login)
@@ -75,9 +79,14 @@ module Controller
 
       return  if ! request.post?
 
-      invitation = Libertree::Model::Invitation[ code: @invitation_code, account_id: nil ]
+      invitation = Libertree::Model::Invitation[ code: @invitation_code ]
       if invitation.nil?
         flash[:error] = _('A valid invitation code is required.')
+        return
+      end
+
+      if ! invitation.account_id.nil?
+        flash[:error] = _('This invitation code has already been used. Try another one!')
         return
       end
 
@@ -103,6 +112,7 @@ module Controller
         invitation.account_id = a.id
 
         account_login request.subset('username', 'password')
+        flash[:error] = nil
         redirect Home.r(:/)
       rescue PGError => e
         case e.message
