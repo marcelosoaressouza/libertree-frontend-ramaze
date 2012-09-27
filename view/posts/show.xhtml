@@ -34,10 +34,10 @@
 
             <?r if @post.member == account.member ?>
               <a href="/posts/edit/#{@post.id}" class="edit">#{_('edit')}</a>
-              <a href="/posts/destroy/#{@post.id}" class="delete">#{_('delete')}</a>
+              <a href="/posts/destroy/#{@post.id}" data-msg="#{_('Delete this post?')}" class="delete">#{_('delete')}</a>
             <?r end ?>
 
-            <a class="collect" href="#" title="Collect this post in a pool">#{_('collect')}</a>
+            <a class="collect" href="#" data-text-success="#{_('collected')}" title="#{_('Collect this post in a pool')}">#{ @post.collected_by?(account) ? _('collected') : _('collect') }</a>
 
             <?r if @post.like_by(account.member) ?>
               <a href="#" class="unlike" data-post-like-id="#{@post.like_by(account.member).id}">#{_('unlike')}</a>
@@ -65,7 +65,7 @@
 
     <div class="comments-pane">
   <?r end ?>
-      #{ render_file 'view/comments/_comments.xhtml', post: @post, comment_fetch_options: @comment_fetch_options, hidden: false }
+      #{ Controller::Comments.render_partial "_comments_list", post: @post, comment_fetch_options: @comment_fetch_options, hidden: false }
   <?r if session[:layout] != 'narrow' ?>
     </div>
   <?r end ?>

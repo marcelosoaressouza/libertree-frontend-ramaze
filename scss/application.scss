@@ -25,7 +25,7 @@ body.body {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0px;
 }
-div, p, form {
+div, p, form, ul {
     + h2, + h3, + h4 {
         margin-top: 1em;
     }
@@ -68,7 +68,7 @@ pre code {
 code {
     border: 1px solid $sand;
     background: $dust;
-    border-radius: 3px;
+    @include rounded;
     padding: 2px;
 }
 
@@ -92,6 +92,7 @@ a.member-name, a.member-name:visited {
 
 textarea, input[type="text"], input[type="password"] {
     border: 1px solid;
+    @include rounded;
 }
 
 .main {
@@ -101,8 +102,9 @@ textarea, input[type="text"], input[type="password"] {
     margin: 70px auto 30px auto;
     padding: 30px;
     background: transparent;
-    border-radius: 3px;
+    @include rounded;
 }
+
 
 .flash {
   padding: 1em 50px;
@@ -553,17 +555,6 @@ textarea#invitations {
     opacity: 1.0;
 }
 
-.search {
-    li.profile {
-        list-style-type: none;
-    }
-    img.avatar {
-        width: 16px;
-        height: 16px;
-        margin-bottom: 0;
-    }
-}
-
 div.pools {
     position: fixed;
     z-index: 2;
@@ -600,7 +591,7 @@ div.pools .chzn-container .chzn-results li {
     background-color: $faint_green;
 }
 
-.profile #river-selector {
+.profile #contact-list-selector, .excerpts-view.pool #river-selector {
     width: 400px;
 }
 

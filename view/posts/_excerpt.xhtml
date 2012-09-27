@@ -1,4 +1,4 @@
-<div class="post-excerpt" id="post-#{@post.id}" data-post-id="#{@post.id}" data-t="#{ @river_post_order == :comment ? DateTime.parse(@post['time_updated_overall']).to_time.to_f : @post.time_created.to_time.to_f }">
+<div class="post-excerpt" id="post-#{@post.id}" data-post-id="#{@post.id}" data-t="#{ @river_post_order == :comment ? @post.time_updated_overall.to_time.to_f : @post.time_created.to_time.to_f }">
   <div class="meta">
     <?r if session[:layout] == 'narrow' ?>
       <a href="#river-menu" class="back-to-top" title="#{_('back to top')}">#{img 'up-arrow.png', {alt:"back to top", class:"size-16"}}</a>
@@ -33,7 +33,7 @@
 
       <?r if @post.member == account.member ?>
         <a href="/posts/edit/#{@post.id}" class="edit">#{_('edit')}</a>
-        <a href="/posts/destroy/#{@post.id}" class="delete">#{_('delete')}</a>
+        <a href="/posts/destroy/#{@post.id}" data-msg="#{_('Delete this post?')}" class="delete">#{_('delete')}</a>
       <?r end ?>
 
       <?r if @post.read_by?(account) ?>
@@ -49,8 +49,8 @@
         <a class="confirm-hide" href="#" title="#{_('Click to confirm hiding of this post.')}">#{_('confirm')}</a>
       <?r end ?>
 
-      <a class="collect" href="#" title="#{_('Collect this post in a pool')}">#{ @post.collected_by?(account) ? _('collected') : _('collect') }</a>
-      <?r if @pool ?>
+      <a class="collect" href="#" data-text-success="#{_('collected')}" title="#{_('Collect this post in a pool')}">#{ @post.collected_by?(account) ? _('collected') : _('collect') }</a>
+      <?r if @pool && @pool.member == account.member ?>
       <a class="remove" data-pool-id="#{@pool.id}" href="#" title="#{_('Remove this post from this pool')}">#{_('remove')}</a>
       <?r end ?>
 
@@ -64,7 +64,7 @@
       <div class="post-text typed-text">
         #{Libertree.render(@post.text, account.autoembed)}
       </div>
-      #{ render_file 'view/comments/_comments.xhtml', post: @post, hidden: true }
+      #{ render_file 'view/comments/_comments_list.xhtml', post: @post, comment_fetch_options: @comment_fetch_options || { limit: 4 }, hidden: true }
     </div>
   </div>
   <div class="show-more"><a href="#">#{_('show more')}</a></div>

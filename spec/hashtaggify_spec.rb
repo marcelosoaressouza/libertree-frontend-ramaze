@@ -45,6 +45,10 @@ describe Libertree do
       subject.render('# A #simple heading').should == Nokogiri::HTML::fragment(%{<h1>A <a href="/rivers/ensure_exists/%23simple" class="hashtag">#simple</a> heading</h1>\n}).to_xhtml
     end
 
+    it 'should linkify hashtags in parentheses' do
+      subject.render('a hashtag (#hashtag)').should == Nokogiri::HTML::fragment(%{<p>a hashtag \(<a href="/rivers/ensure_exists/%23hashtag" class="hashtag">#hashtag</a>\)</p>\n}).to_xhtml
+    end
+
     it 'should not linkify hashtags in code blocks' do
       subject.render('`#simple`').should == %{<p><code>#simple</code></p>}
     end
@@ -57,5 +61,11 @@ describe Libertree do
       subject.render(nil).should == ''
       subject.render('').should == ''
     end
+
+    it 'should leave a space between two nodes' do
+      subject.render('[separate](URL) [this](URL)').should == %{<p><a href="URL">separate</a> <a href="URL">this</a></p>}
+      subject.render('#hash [tag](http://libertreeproject.org)').should == %{<p><a href="/rivers/ensure_exists/%23hash" class="hashtag">#hash</a> <a href="http://libertreeproject.org">tag</a></p>}
+    end
+
   end
 end

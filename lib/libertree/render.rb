@@ -10,7 +10,7 @@ module Libertree
     markdown ||= Redcarpet::Markdown.new(
       Libertree::Markdown.new,
       {
-        autolink: false,
+        autolink: true,
         space_after_headers: true,
         no_intra_emphasis: true,
         strikethrough: true
@@ -21,7 +21,7 @@ module Libertree
 
   def self.hashtaggify(s)
     return ''  if s.nil? or s.empty?
-    s.force_encoding('utf-8').gsub(/(?<=^|\s)#([\p{Word}\p{Pd}]+)(?=\s|\b|$)/i) {
+    s.force_encoding('utf-8').gsub(/(?<=^|\s|\()#([\p{Word}\p{Pd}]+)(?=\s|\b|\)|$)/i) {
       %|<a href="/rivers/ensure_exists/%23#{$1.downcase}" class="hashtag">##{$1}</a>|
     }
   end
@@ -29,10 +29,8 @@ module Libertree
   def self.post_processing(s)
     return ''  if s.nil? or s.empty?
 
-    # Crude autolinker.
-    # We cannot do this with redcarpet, as enabling :autolink breaks the normal_text callback
-    # This has to be done after processing with markdown, as the markdown renderer filters all HTML.
-    s.gsub!(%r{(?<=^|\s|^<p>|^<li>)(https?://[^\b\s$<]+|www\.[^\b\s$<]+|/posts/show/\d+(/\d+#comment-\d+)?)}, "<a href='\\1'>\\1</a>")
+    # Crude autolinker for relative links to local resources
+    s.gsub!(%r{(?<=^|\s|^<p>|^<li>)(/posts/show/\d+(/\d+(#comment-\d+)?)?)}, "<a href='\\1'>\\1</a>")
 
     html = Nokogiri::HTML::fragment(s)
     html.css('a').each do |a|
@@ -48,8 +46,11 @@ module Libertree
 
     # hashtaggify everything that is not inside of code or pre tags
     html.traverse do |node|
-      if node.ancestors("code").empty? && node.ancestors("pre") && node.text?
-        node.replace Nokogiri::HTML::fragment(Libertree::hashtaggify(node.text))
+      if node.text? && ["code", "pre", "a"].all? {|tag| node.ancestors(tag).empty? }
+        hashtag = Libertree::hashtaggify(node.text)
+        if ! hashtag.eql? node.text
+          node.replace hashtag
+        end
       end
     end
 
@@ -100,12 +101,12 @@ module Libertree
   end
 
   def self.render(s, autoembed=false)
+    html = markdownify(s)
     if autoembed
       # FIXME: maybe this should only be done for posts
-      Libertree::Embedder.replace_urls_with_objects(markdownify(s))
-    else
-      markdownify(s)
+      html = Libertree::Embedder.inject_objects(html)
     end
+    html
   end
 
   module HasRenderableText

@@ -65,7 +65,6 @@ $(document).ready( function() {
     overflowed.data( 'contracted-height', overflowed.height() );
 
     excerptParent.find('div.comments.hidden').removeClass('hidden');
-    showMoreComments( excerpt.find('.comments'), 3 );
 
     var heightDifference = excerpt.get(0).scrollHeight - overflowed.height();
     var animationSpeed = heightDifference * 2;
@@ -127,7 +126,7 @@ $(document).ready( function() {
       { height: overflowed.data('contracted-height')+'px' },
       animationSpeed,
       function() {
-        $(this).closest('.post-excerpt').find('div.comments, div.comment').addClass('hidden');
+        $(this).closest('.post-excerpt').find('div.comments').addClass('hidden');
       }
     );
     return false;
@@ -156,7 +155,7 @@ $(document).ready( function() {
     $('.more-posts-divider').removeClass('more-posts-divider');
     $('.post-excerpt:first').addClass('more-posts-divider'),
 
-    addSpinner($(this).parent());
+    addSpinner($(this).parent(), 'append');
     loadPostExcerpts(
       $('#post-excerpts').data('river-id'),
       'newer',

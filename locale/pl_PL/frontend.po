@@ -1,267 +1,266 @@
 # 
 # Translators:
-#   <hectormejia@riseup.net>, 2012.
-#   <lunachik@zoho.com>, 2012.
-#   <simbobo@cooptel.net>, 2012.
+#   <marc_smith@gmx.com>, 2012.
+# Zulu  <frisbeefanatic@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Libertree\n"
 "Report-Msgid-Bugs-To: http://issues.libertreeproject.org/\n"
 "POT-Creation-Date: 2010-06-08 10:12+0300\n"
 "PO-Revision-Date: 2012-08-25 08:48+0000\n"
-"Last-Translator: mauriciomejia <hectormejia@riseup.net>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/libertree/language/es/)\n"
+"Last-Translator: rekado <rekado+libertree@elephly.net>\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/libertree/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: view/login.xhtml
 msgid "Username"
-msgstr "Nombre de usuario"
+msgstr " Nazwa użytkownika"
 
 msgid "Password"
-msgstr "Contraseña"
+msgstr "Hasło"
 
 msgid "Login"
-msgstr "Iniciar Sesión"
+msgstr "Zaloguj"
 
 msgid "Not a member yet?"
-msgstr "¿Aún no eres miembro?"
+msgstr "Nie masz jeszcze konta?"
 
 # "Sign up now" is wrapped in a link
 msgid "Sign up now!"
-msgstr "¡Regístrate ahora!"
+msgstr "Zarejestruj się!"
 
 msgid "Forgot your credentials?"
-msgstr "¿Has olvidado tus credenciales?"
+msgstr "Nie pamiętasz hasła lub nazwy użytkownika?"
 
 msgid ""
 "You can %sreset your password%s if your account has an email address on "
 "record."
-msgstr "Puedes %sreinicializar tu contraseña%s si registraste tu dirección de correo electrónico."
+msgstr "Można %szresetować hasło%s jeśli twoje konto ma adres e-mail zarejestrowany w systemie."
 
 #: controller/main.rb
 msgid "Invalid credentials."
-msgstr "Credenciales Inválidos"
+msgstr "Nieprawidłowy adres e-mail lub hasło."
 
 msgid "A valid invitation code is required."
-msgstr "Se necesita código de invitación."
+msgstr "Poprawny kod zaproszenia jest wymagany."
 
 msgid "This invitation code has already been used. Try another one!"
-msgstr "Este código de invitación ya fue utilizado. Prueba con otro."
+msgstr "Ten kod zaproszenia został już użyty. Spróbuj innego!"
 
 msgid "You mistyped your password."
-msgstr "No escribies a máquina tu constreña corectamente."
+msgstr "Hasło zostało wpisane nieprawidłowo."
 
 msgid "Username %s is taken.  Please choose another."
-msgstr "Nombre de usario %s está tomado.  Por favor, escoge un otro."
+msgstr "Nazwa użytkownika %s jest już zajęta. Proszę wybrać inną."
 
 msgid ""
 "Username must be at least 2 characters long and consist only of lowercase "
 "letters, numbers, underscores and dashes."
-msgstr "El nombre de usuario debe tener más de 2 caracteres y consiste solamente de letras minúsculas, números,  guiones bajos  y guiones."
+msgstr "Nazwa użytkownika musi zawierać co najmniej dwóch znaków i składać się wyłącznie z małych liter, cyfr, podkreśleń lub myślników."
 
 msgid ""
 "A password reset link has been sent for the account with that email address."
-msgstr "Un hipervinculo para recover constreña se ha enviado por la cuenta con ese dirección de email. "
+msgstr "Link resetowania hasła został wysłany do Twojego adresu e-mail."
 
 msgid "You have been logged out."
-msgstr "Tu sesión está cerrado."
+msgstr "Zostałeś wylogowany."
 
 #: controller/base.rb
 msgid "not-authenticated|Please log in."
-msgstr "Por favor, abre sesión."
+msgstr "Proszę się zalogować."
 
 #: controller/invitations.rb
 msgid ""
 "Failed to create invitation.  You may only have up to 5 unaccepted "
 "invitations at once."
-msgstr "Lo hace falta crear una invitación. Solamente puede tener no más que 5 invitaciones que nadie aceptó en la misma vez. "
+msgstr "Utworzenie zaproszenia nie powiodło się. Możesz mieć tylko 5 niezaakceptowanych zaproszeń."
 
 #: view/home/index.xhtml
 msgid "River:"
-msgstr "Río"
+msgstr "Rzeka:"
 
 msgid "manage rivers"
-msgstr "administrar los ríos"
+msgstr "Zarządzaj rzekami"
 
 #: view/home/_menu.xhtml
 msgid "by post time"
-msgstr "Recientemente publicado"
+msgstr "Według czasu pisania."
 
 msgid "by update time"
-msgstr " Recientemente comentado"
+msgstr "według czasu aktualizacji"
 
 msgid "mark all read"
-msgstr "marcar toda como leída"
+msgstr "oznacz wszystkie jako przeczytane"
 
 #: view/posts/new.xhtml
 msgid "New Post"
-msgstr "Publicación Nueva"
+msgstr "Nowy post"
 
 msgid "(enter hashtags here)"
-msgstr "(Ingresa las etiquetas aquí)"
+msgstr "(tutaj wprowadź hashtagi)"
 
 msgid "new-post|Post"
-msgstr "Publicación"
+msgstr "Post"
 
 #: view/comments/_comments.xhtml, view/posts/{new,edit}.xhtml
 msgid "post|Preview"
-msgstr "Vista previa"
+msgstr "Podgląd"
 
 msgid "Visibility"
-msgstr "Visibilidad"
+msgstr "Widoczność"
 
 msgid "visibility|Internet"
-msgstr "La Red"
+msgstr "Internet"
 
 msgid "visibility|Forest"
-msgstr "Bosque"
+msgstr "Las"
 
 #: helper/post.rb
 msgid "This post and its comments are visible to the whole Internet"
-msgstr "Esta publicación y sus comentarios son visible a todo de la Red."
+msgstr "Ten post i komentarze do postu są widoczne dla całego internetu"
 
 msgid ""
 "This post and its comments are only visible to members of this Libertree "
 "forest"
-msgstr "Esta publicación y sus comentarios son solamente visible a miembros de este bosque de Libertree."
+msgstr "Ten post i komentarze do postu są widoczne tylko dla użytkowników tego lasu Libertree"
 
 #: view/posts/edit.xhtml
 msgid "Edit Post"
-msgstr "Editar Publicación"
+msgstr "Edytuj post"
 
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anuluj"
 
 msgid "post|Update"
-msgstr "Actualizar"
+msgstr "Aktualizacja"
 
 #: view/posts/show.xhtml
 msgid "Start receiving notifications about comments on this post"
-msgstr "Comienza recibir notificaciones de los comentarios de esta publicación"
+msgstr "Rozpocznij otrzymywanie powiadomień dotyczących komentarzy do tego posta"
 
 msgid "subscribe"
-msgstr "Subscribir"
+msgstr "zapisz się"
 
 msgid "Stop receiving notifications about comments on this post"
-msgstr "Dejar de recibir notificaciones de los comentarios de esta publicación"
+msgstr "Anuluj otrzymywanie powiadomień dotyczących komentarzy do tego posta"
 
 msgid "unsubscribe"
-msgstr "No subscribir"
+msgstr "wypisz się"
 
 msgid "mark post unread"
-msgstr "Marcar publicación como no leída"
+msgstr "oznacz post jako nieprzeczytany"
 
 msgid "mark post read"
-msgstr "Marcar publicación como leída"
+msgstr "oznacz post jako przeczytany"
 
 msgid "edit"
-msgstr "Editar"
+msgstr "edytuj"
 
 msgid "delete"
-msgstr "Suprimir"
+msgstr "usuń"
 
 msgid "collect"
-msgstr "Coleccionar"
+msgstr "zbierz"
 
 msgid "unlike"
-msgstr "Ya no me gusta"
+msgstr "nie lubię"
 
 msgid "like"
-msgstr "Me gusta"
+msgstr "lubię"
 
 msgid "likes"
-msgstr "Les gusta"
+msgstr "polubione"
 
 msgid "Delete this post?"
-msgstr "¿Eliminar esta publicación?"
+msgstr ""
 
 #: view/posts/_excerpts.xhtml
 msgid "No more posts."
-msgstr "No hay más publicaiones."
+msgstr "Brak postów."
 
 msgid ""
 "The system is still matching posts with this river. Check in a few minutes "
 "for more posts."
-msgstr "El sistema aún está igualando las publicaciones para este río. Ve en los próximos minutos por más publicaciones."
+msgstr "System wciąż wyszukuje posty dla tej rzeki. Sprawdź za kilka minut, czy są nowe posty."
 
 #: view/posts/_excerpt.xhtml
 msgid "back to top"
-msgstr "Volver arriba"
+msgstr "powróć na początek strony"
 
 msgid "Liked by %s"
-msgstr "Le gusta a %s"
+msgstr "Polubione przez %s"
 
 msgid "1 comment by %1$s"
-msgstr "1 comentario de %1$s"
+msgstr "1 komentarz zamieszczony przez %1$s"
 
 msgid "%2$d comments by %1$s"
-msgstr "%2$d comentarios de %1$s"
+msgstr "%2$d komentarzy napisanych przez %1$s"
 
 msgid "comments"
-msgstr "Comentarios"
+msgstr "komentarze"
 
 msgid "comment"
-msgstr "Comentar"
+msgstr "komentarz"
 
 msgid "mark read"
-msgstr "Marcar como leído"
+msgstr "oznacz przeczytane"
 
 msgid "mark unread"
-msgstr "Marcar como no leído"
+msgstr "oznacz nieprzeczytane"
 
 msgid ""
 "Hiding a post prevents it from showing in your rivers or triggering "
 "notifications."
-msgstr "Si escondes una publicación, no ves en tus ríos y no recibes notificaciones. \nOcultar una publicación previene que se muestre en tus ríos o que recibas sus notificaciones"
+msgstr "Ukrycie postu zapobiega pokazywaniu twoich rzek lub pokazywaniu powiadomień"
 
 msgid "hide"
-msgstr "Ocultar"
+msgstr "ukryj"
 
 msgid "Click to confirm hiding of this post."
-msgstr "Hacer un clic para confirmar que desea ocultar esta publicación."
+msgstr "Kliknij aby potwierdzić ukrycie tego posta"
 
 msgid "confirm"
-msgstr "Confirmar"
+msgstr "potwierdź"
 
 msgid "Collect this post in a pool"
-msgstr "Colecionar esta publicación en una charca"
+msgstr "Dodaj ten post do grupy"
 
 msgid "collected"
-msgstr "Coleccionado"
+msgstr "zebrane"
 
 msgid "Remove this post from this pool"
-msgstr "Eliminar esa publicación de esta charca. "
+msgstr "Usuń ten post z tej grupy"
 
 msgid "remove"
-msgstr "Eliminar"
+msgstr "usuń"
 
 msgid ""
 "Middle click, Shift-click, or Ctrl-Shift-click to open in new tab/window"
-msgstr "Clic de medio, Shift-clic, o Ctrl-Shift-clic para abrir en una pestaña/ventana nueva"
+msgstr "Kliknij środkowym przyciskiem myszy, kliknij z użyciem Shift, lub użyj kombinacji Ctrl-Shift-kliknięcie, aby otworzyć w nowej zakładce / oknie"
 
 msgid "view post"
-msgstr "ver la publicación"
+msgstr "przeczytaj posta"
 
 msgid "show more"
-msgstr "mostrar más"
+msgstr "pokaż więcej"
 
 msgid "show less"
-msgstr "mostrar menos"
+msgstr "pokaż mniej"
 
 #: controller/posts.rb
 msgid "Post may not be empty."
-msgstr "La publicación no puede ser vácio."
+msgstr "Post nie może być pusty."
 
 #: controller/pools.rb
 msgid "You already have a pool with that name."
-msgstr "Ya tienes una charca con ese nombre. "
+msgstr "Już posiadasz grupę o tej nazwie."
 
 msgid "Failed to create pool or add post."
-msgstr "Fallo al crear charca o al agregar publicación."
+msgstr ""
 
 msgid "Failed to add post to pool."
 msgstr ""
@@ -271,831 +270,831 @@ msgstr ""
 
 #: controller/profiles.rb
 msgid "Special characters are not allowed in display names."
-msgstr "Los caracteres especiales no está permitido en los nombres de exhibir."
+msgstr "Znaki specjalne nie są dozwolone w wyświetlanych nazwach."
 
 msgid "Avatar deleted."
-msgstr "Avatar se ha suprimido."
+msgstr "Avatar został usunięty."
 
 msgid "Avatar changed."
-msgstr "Avatar se ha cambiado."
+msgstr "Avatar został zmieniony."
 
 msgid "Failed to reset avatar."
-msgstr "Avatar no se ha reinicializado."
+msgstr "Zresetowanie avatara się nie powiodło."
 
 msgid "Only image files may be used as avatars."
-msgstr "Solamente los archivos de imagenes puede usar para avatar."
+msgstr "Tylko pliki graficzne mogą zostać użyte jako avatary."
 
 msgid "Only .png, .jpeg and .gif files may be used as avatars."
-msgstr "Solamente los archivos de .png, .jpeg, y .gif pueden usar para avatar."
+msgstr "Tylko pliki .png, .jpeg i .gif mogą zostać użyte jako avatary."
 
 #: controller/rivers.rb
 msgid "You already have a river for that."
-msgstr "Ya tienes un río por eso."
+msgstr "Utworzyłeś już rzekę dla tego elementu."
 
 #: view/comments/_comments.xhtml
 msgid "One comment"
-msgstr "Un comentario"
+msgstr "Jeden komentarz"
 
 msgid "showing 1 comment"
-msgstr "Mostrando 1 comentario"
+msgstr "pokazywanie 1 komentarza"
 
 msgid "%d comments"
-msgstr "%d comentarios"
+msgstr "%d komentarzy"
 
 msgid "showing %d of %d comments"
-msgstr "Mostrando %d of %d comentarios"
+msgstr "pokazywanie %d z %d komentarzy"
 
 msgid "show %smore%s / %sall%s comments"
-msgstr "mostrar %smás%s / %stodos%s comentarios"
+msgstr "pokaż %swięcej%s / %swszystkie%s komentarze"
 
 msgid "more comments"
-msgstr "más comentarios"
+msgstr "więcej komentarzy"
 
 msgid "jump-to-comment|Comment"
-msgstr "Comentar"
+msgstr "Komentarz"
 
 msgid "Comment successfully posted."
-msgstr "El comentario publicó con éxito."
+msgstr "Komentarz został pomyślnie zamieszczony."
 
 msgid "detach"
-msgstr "separar"
+msgstr "odłącz"
 
 msgid "attach"
-msgstr "adjuntar"
+msgstr "dołącz"
 
 msgid "Clear"
-msgstr "Borrar"
+msgstr "Wyczyść"
 
 msgid "Comment"
-msgstr "Comentar"
+msgstr "Komentarz"
 
 #: view/comments/_comment.xhtml
 msgid "One like"
-msgstr "A uno, le gusta"
+msgstr "Jedno polubienie"
 
 msgid "%d likes"
-msgstr "A %d, les gusta"
+msgstr "%d polubień"
 
 msgid "back-to-referencing-comment|back"
-msgstr "regresar"
+msgstr "powrót"
 
 msgid "Unlike this comment"
-msgstr "No me gusta este comentario"
+msgstr "Cofnij \"lubię to\" dla tego komentarza"
 
 msgid "Like this comment"
-msgstr "Me gusta este comentario"
+msgstr "polub ten komentarz"
 
 msgid "shareable link for this comment"
-msgstr "hiperví­nculo para distributir de este comentario "
+msgstr "link współdzielony dla tego komentarza"
 
 #: view/_markdown_injector.xhtml
 msgid "markdown|title"
-msgstr "titulo"
+msgstr "tytuł"
 
 msgid "markdown|subtitle"
-msgstr "subtitulo"
+msgstr "podtytuł"
 
 msgid "markdown|link"
-msgstr "hiperví­nculo"
+msgstr "link"
 
 msgid "markdown|image"
-msgstr "imagen"
+msgstr "obraz"
 
 msgid "markdown|image link"
-msgstr "hiperví­nculo de imagen"
+msgstr "link do obrazu"
 
 msgid "markdown|quote"
-msgstr "cita"
+msgstr "cytat"
 
 msgid "markdown|list"
-msgstr "listo"
+msgstr "lista"
 
 msgid "markdown|bold"
-msgstr "negrita"
+msgstr "pogrubione"
 
 msgid "markdown|italic"
-msgstr "cursiva"
+msgstr "pochylone"
 
 #: view/accounts/edit.xhtml
 msgid "Account Settings"
-msgstr "Configuración de Cuenta"
+msgstr "Ustawienia konta"
 
 msgid "Edit profile"
-msgstr "Editar perfil"
+msgstr "Edytuj profil"
 
 msgid "Manage rivers"
-msgstr "Administrar ríos"
+msgstr "Zarządzaj rzekami"
 
 msgid "Change password"
-msgstr "Cambiar constreña"
+msgstr "Zmień hasło"
 
 msgid "Email:"
 msgstr "Email:"
 
 msgid "(for password recovery; never public)"
-msgstr "(para recuperar la constreña ; nunca publica)"
+msgstr "(dla celów związanych z odzyskiwaniem hasła: nie ujawniamy tych informacji)"
 
 msgid "Post excerpt maximum height:"
-msgstr "La altura máxima de extracto de publicación:"
+msgstr "Maksymalna wielkość fragmentu posta:"
 
 msgid "pixels"
-msgstr "pixels"
+msgstr "pikseli"
 
 msgid "Custom menu link:"
-msgstr "Hipervínculo del menú personalizado:"
+msgstr "Własny link menu:"
 
 msgid "Custom CSS:"
-msgstr "CSS Personalizada:"
+msgstr "Własny CSS:"
 
 msgid "Custom JS:"
-msgstr "JS Personalizada:"
+msgstr "Własny JS:"
 
 msgid "Automatic embedding:"
-msgstr "Incrustación de Objetos Automática "
+msgstr "Automatyczne osadzanie:"
 
 msgid "Make thumbnails for images in post excerpts:"
-msgstr "Hacer las minaturas de imagenes para los imagenes en los extractos de publicaciones:"
+msgstr "Utwórz miniatury dla obrazów we fragmentach postu:"
 
 msgid "Language:"
-msgstr "Idioma:"
+msgstr "Język:"
 
 msgid "Save"
-msgstr "Guardar"
+msgstr "Zapisz"
 
 msgid "Invite Others"
-msgstr "Invitar Otros"
+msgstr "Zaproś innych"
 
 msgid "Generate a new invitation"
-msgstr "Generar una invitación nueva"
+msgstr "Wygeneruj nowe zaproszenie"
 
 msgid "My Invitations"
-msgstr "Mis Invitaciones"
+msgstr "Moje zaproszenia"
 
 msgid "Member API"
-msgstr "API de miembro"
+msgstr "API członka"
 
 msgid "Current API token:"
-msgstr "API token actual:"
+msgstr "Aktualny token API"
 
 msgid "(none)"
-msgstr "(nada)"
+msgstr "(brak)"
 
 msgid "API documentation"
-msgstr "Documentación de API"
+msgstr "Dokumentacja API"
 
 msgid "Generate API token"
-msgstr "Generar API token"
+msgstr "Wygeneruj token API"
 
 msgid "Data Export"
-msgstr "Exportar Datos"
+msgstr "Eksport danych"
 
 msgid ""
 "Download your account settings, profile, posts, comments and direct "
 "messages:"
-msgstr "Descargar tus configuraciones de cuenta, perfil, publicaciones, comentarios y mensajes directos:"
+msgstr "Pobierz twoje ustawienia konta, profilu, postów, komentarzy i wiadomości bezpośrednich"
 
 #: controller/accounts.rb
 msgid "Settings saved."
-msgstr "Las configuraciones se ha guardadas. "
+msgstr "Ustawienia zapisane."
 
 msgid ""
 "Post excerpt maximum height: Please enter a number greater than or equal to "
 "200, or no number for no maximum."
-msgstr "La altura máxima de los extractos de publicaciones: Por favor, entra un número más que o igual a 200, o no número por no altura máxima."
+msgstr "Przekroczono maksymalną wielkość posta: proszę wprowadzić liczbę większą, lub równą 200. Brak liczby oznacza brak wartości maksymalnej."
 
 msgid "Passwords did not match.  Please reenter."
-msgstr "Las constreñas no igualan.  Por favor, entras de nuevo."
+msgstr "Hasła nie są zgodne. Proszę wprowadzić je ponownie."
 
 msgid "Password changed."
-msgstr "La constreña se ha  cambiada."
+msgstr "Hasło zostało zmienione."
 
 #: view/accounts/change_password.xhtml
 msgid "Change Password"
-msgstr "Cambiar Constreña"
+msgstr "Zmień hasło"
 
 msgid "New password:"
-msgstr "Constreña Nueva:"
+msgstr "Nowe hasło"
 
 msgid "Re-enter new password:"
-msgstr "Entra de nuevo la constreña."
+msgstr "Ponownie wprowadź hasło:"
 
 msgid "button|Change Password"
-msgstr "Cambiar Constreña"
+msgstr "Zmień hasło"
 
 #: view/notifications/{index,_index}.xhtml
 msgid "Notifications"
-msgstr "Notificaciones"
+msgstr "Powiadomienia"
 
 msgid "You have no new notifications."
-msgstr "No tienes notificaiones nuevas."
+msgstr "Nie masz nowych powiadomień."
 
 msgid "mark all seen"
-msgstr "marcar todo como leído"
+msgstr "oznacz wszystkie obejrzane jako przeczytane"
 
 msgid "view all"
-msgstr "ver todo"
+msgstr "przeczytaj wszystkie"
 
 msgid "%d more"
-msgstr "%d más"
+msgstr "%d więcej"
 
 #: view/notifications/_comment.xhtml
 msgid "%1$s commented on your %2$spost%3$s."
-msgstr "%1$s comentó en tu %2$spublicación%3$s."
+msgstr "%1$s skomentował/a twój post %2$spost%3$s."
 
 msgid "%1$s commented on %2$s's %3$spost%4$s."
-msgstr "%1$s comentó en %2$s's %3$s publicación %4$s."
+msgstr "%1$s skomentował/a post %3$spost%4$s zamieszczony przez %2$s ."
 
 #: view/notifications/_comment_like.xhtml
 msgid "%1$s liked your %2$scomment%3$s on your post."
-msgstr "A %1$s le gustó tu %2$s comentario %3$s en tu publicación."
+msgstr "%1$s polubił/a twój %2$skomentarz%3$s do twojego posta."
 
 msgid "%1$s liked your %2$scomment%3$s on %4$s's post."
-msgstr "A %1$s le gusta tu %2$scomentario %3$s en %4$s's publicación."
+msgstr "%1$s polubił/a twój %2$skomentarz%3$s do posta %4$s"
 
 #: view/notifications/_post_like.xhtml
 msgid "%1$s liked your %2$spost%3$s."
-msgstr "A %1$s le gusta tu %2$s publicación %3$s."
+msgstr "%1$s polubił/a twój %2$spost%3$s."
 
 # TODO: positional placeholders
 #: view/notifications/_message.xhtml
 msgid "%1$s sent you a %2$smessage%3$s."
-msgstr "%1$s te envió un %2$s mensaje %3$s."
+msgstr "%1$s wysłał/a ci %2$swiadomość%3$s."
 
 #: helper/wording.rb, view/messages/show.xhtml
 msgid "list-comma|, "
 msgstr ","
 
 msgid "list-and| and "
-msgstr "y"
+msgstr " i"
 
 #: helper/age.rb
 msgid "1 day ago"
-msgstr "hace 1 día"
+msgstr "przed 1 dniem"
 
 msgid "%d days ago"
-msgstr "hace %d días"
+msgstr "przed %d dniami"
 
 msgid "1 hour ago"
-msgstr "hace 1 hora"
+msgstr "przed 1 godziną"
 
 msgid "%d hours ago"
-msgstr "hace %d horas"
+msgstr "przed %d godzinami"
 
 msgid "1 minute ago"
-msgstr "hace 1 minuto"
+msgstr "przed 1 minutą"
 
 msgid "%d minutes ago"
-msgstr "hace %d minutos"
+msgstr "przed %d minutami"
 
 msgid "seconds ago"
-msgstr "hace segundos"
+msgstr "przed kilkoma sekundami"
 
 #: view/search.xhtml
 msgid "Search Results for \"%s\""
-msgstr "Los Resultados de Buscar \"%s\""
+msgstr "Przeszukaj wyniki dla \"%s\""
 
 msgid "search-results|Nothing found."
-msgstr "No encontrado."
+msgstr "Nic nie znaleziono"
 
 msgid "search-results|Profiles"
-msgstr "Perfiles"
+msgstr "Profile"
 
 msgid "search-results|Posts"
-msgstr "Publicaciones"
+msgstr "Posty"
 
 msgid "search-results|Comments"
-msgstr "Comentarios"
+msgstr "Komentarze"
 
 msgid "search-results|view comment"
 msgstr ""
 
 #: controller/contact-lists.rb
 msgid "Contact list updated."
-msgstr "La lista de contactos ha sido actualizada."
+msgstr "Lista kontaktów została uaktualniona"
 
 msgid "Contact list name may not be empty."
-msgstr "Debe dar un nombre a la lista de contactos."
+msgstr "Nazwa listy kontaktów nie powinna być pusta."
 
 msgid "The contact list &ldquo;%s&rdquo; has been deleted."
-msgstr "La lista de contactos &ldquo;%s&rdquo; ha sido eliminada."
+msgstr "Lista kontaktów &ldquo;%s&rdquo; została pomyślnie usunięta."
 
 #: view/contact-lists/index.xhtml
 msgid "Contact Lists"
-msgstr "Listas de contactos"
+msgstr "Lista kontaktów"
 
 msgid "contact-list|Name:"
-msgstr "Nombre:"
+msgstr "Nazwa:"
 
 msgid "new-contact-list|Create"
-msgstr "Crear"
+msgstr "Utwórz"
 
 msgid "contact-list|delete"
-msgstr "Eliminar"
+msgstr "usuń"
 
 #: view/contact-lists/show.xhtml
 msgid "Contact List: %s"
-msgstr "Lista de contactos: %s"
+msgstr "Lista kontaktów: %s"
 
 msgid "(choose members)"
-msgstr "(Elige miembros)"
+msgstr "(wybierz członków)"
 
 msgid "contact-list|Save"
-msgstr "Guardar"
+msgstr "Zapisz"
 
 msgid "contact-list|Cancel"
-msgstr "Cancelar"
+msgstr "Anuluj"
 
 #: controller/admin/base.rb
 msgid "Administrative privileges required."
-msgstr "Requiere privilegios administrativos."
+msgstr "Wymagane uprawnienia administratora."
 
 #: controller/admin/forests.rb
 msgid "The tree is already a member of the forest."
-msgstr "El árbol ya es un miembro del bosque."
+msgstr "To drzewo jest już częścią twojego lasu."
 
 #: view/admin/index.xhtml
 msgid "Libertree Administration"
-msgstr "La Administración de Libertree"
+msgstr "Administracja Libertree"
 
 msgid "Forests"
-msgstr "Bosques"
+msgstr "Lasy"
 
 msgid ""
 "Drag trees in and out of forests.  The local tree is automatically a part of"
 " each forest originating from it."
-msgstr "Arrastra y coloca los árboles dentro y fuera de los bosques. El árbol local es automáticament una parte de cada bosque de donde es originado. "
+msgstr "Przeciągaj drzewa do i z lasów, Drzewo lokalne automatycznie staje się częścią każdego lasu, które się z niego wywodzi."
 
 msgid "create-forest|Name:"
-msgstr "Nombre:"
+msgstr "Nazwa:"
 
 msgid "create-forest|Add"
-msgstr "Agregar"
+msgstr "Dodaj"
 
 msgid "forest|Origin:"
-msgstr "Origen:"
+msgstr "Pochodzenie:"
 
 msgid "forest-origin|this tree"
-msgstr "Este árbol"
+msgstr "to drzewo"
 
 msgid "Trees"
-msgstr "Árboles"
+msgstr "Drzewa"
 
 msgid "new-tree|Hostname:"
-msgstr "Nombre de Servidor:"
+msgstr "Nazwa hosta:"
 
 msgid "new-tree|Add"
-msgstr "Agregar"
+msgstr "Dodaj"
 
 msgid "Job queue"
-msgstr "Trabajo en espera"
+msgstr "Kolejka zadań"
 
 #: view/admin/jobs/index.xhtml
 msgid "Unfinished Jobs"
-msgstr "Trabajos sin finalizar"
+msgstr "Nieukończone zadania"
 
 msgid "Unfinished Jobs: %s"
-msgstr "Trabajos sin finalizar:%s"
+msgstr "Nieukończonych zadań: %s"
 
 msgid "jobs|Show all"
-msgstr "Mostrar todos"
+msgstr "Pokaż wszystkie"
 
 msgid "jobs|ID"
-msgstr "ID"
+msgstr "Numer"
 
 msgid "jobs|Task"
-msgstr "Tareas"
+msgstr "Zadanie"
 
 msgid "jobs|Params"
-msgstr ""
+msgstr "Parametry"
 
 msgid "jobs|Time created"
-msgstr "Tiempo de creación"
+msgstr "Czas utworzenia"
 
 msgid "jobs|Time started"
-msgstr "Tiempo de Inicio"
+msgstr "Czas rozpoczęcia"
 
 msgid "jobs|Tries"
-msgstr "Intenta"
+msgstr "Próby"
 
 msgid "jobs|Actions"
-msgstr "Acciones"
+msgstr "Akcje"
 
 msgid "jobs|Retry"
-msgstr "Vuelva a intentar"
+msgstr "Ponów"
 
 msgid "jobs|Delete"
-msgstr "Borrar"
+msgstr "Usuń"
 
 msgid "jobs|Back to forest administration"
-msgstr "Regresar a la administración del bosque"
+msgstr "Powrót do zarządzania lasem"
 
 msgid "Delete this job?"
-msgstr "¿Eliminar este trabajo?"
+msgstr ""
 
 #: view/404.xhtml
 msgid "404|No such page"
-msgstr "La página no existe."
+msgstr "Nie ma takiej strony"
 
 msgid ""
 "404|Please use your browser's Back button, or %sgo to your home page%s."
-msgstr "Por favor, usa tu botón de átras, o %sgo vaya a tu página inicial%s."
+msgstr "Użyj przycisku \"wstecz\" twojej przeglądarki, lub %s\"idź do\" twojej strony domowej%s"
 
 #: view/error.xhtml
 msgid "Something went wrong..."
-msgstr "Algo salió mal..."
+msgstr "Coś poszło nie tak ..."
 
 msgid "Time of error: %s"
-msgstr "El tiempo del error: %s"
+msgstr "Czas wystąpienia błędu: %s"
 
 msgid "Referrer: %s"
-msgstr "Persona quien te refiere: %s"
+msgstr "Odnośnik: %s"
 
 #: view/messages/{index,show}.xhtml
 msgid "Direct Messages"
-msgstr "Mensajes Directos"
+msgstr "Wiadomości bezpośrednie"
 
 msgid "direct-message|New Message"
-msgstr "Mensaje Nuevo"
+msgstr "Nowa wiadomość"
 
 msgid "direct-message|Messages"
-msgstr "Mensajes"
+msgstr "Wiadomości"
 
 msgid "direct-message|From:"
-msgstr "De:"
+msgstr "Od:"
 
 msgid "direct-message|To:"
-msgstr "A:"
+msgstr "Do:"
 
 #: view/messages/_new.xhtml
 msgid "direct-message|Send"
-msgstr "Enviar"
+msgstr "Wyślij"
 
 msgid "direct-message|Preview"
-msgstr "Vista previa"
+msgstr "Podgląd"
 
 msgid "direct-message|Recipients"
-msgstr "Destinatarios"
+msgstr "Odbiorcy"
 
 msgid "direct-message-warning|please note..."
-msgstr "Por favor toma nota..."
+msgstr "zwróc uwagę ..."
 
 msgid ""
 "Please note that direct messages are not fully private, encrypted nor "
 "secure.  As with all data on this tree, direct messages are fully accessible"
 " to the arborista (administrator)."
-msgstr "Por favor nota que los mensajes directos no son privado completemente, encriptado, ni seguro.  Como con todos los datos en este árbol, los mensajes directos son accesible al arborista (administrador)."
+msgstr "Zwróć uwagę na to, że wiadomości prywatne nie są całkowicie prywatne, zaszyfrowane lub bezpieczne. | Tak, jak wszystkie dane na tym drzewie, także wiadomości bezpośrednie są w pełni dostępne dla plantatora (administratora)."
 
 #: view/messages/show.xhtml
 msgid "direct-message|reply"
-msgstr "responder"
+msgstr "odpowiedz"
 
 msgid "direct-message|reply to all"
-msgstr "responder a todos"
+msgstr "odpowiedz wszystkim"
 
 #: view/pools/_index.xhtml
 msgid "pool-selector|Collect in..."
-msgstr "Colecciona en..."
+msgstr "Zbierz w ..."
 
 #: view/pools/index.xhtml
 msgid "Pools"
-msgstr "Charcas"
+msgstr "Grupy"
 
 msgid "Use pools to collect posts."
-msgstr "Usa las charcas para colecionar publicaciones."
+msgstr "Użyj grup, aby zebrać posty."
 
 msgid "pool|Name:"
-msgstr "Nombre:"
+msgstr "Nazwa:"
 
 msgid "new-pool|Create"
-msgstr "Crear:"
+msgstr "Utwórz"
 
 msgid "pool|Delete"
-msgstr "Suprimir"
+msgstr "Usuń"
 
 msgid "All record of collected posts will be lost. Delete this pool?"
 msgstr ""
 
 #: view/pools/show.xhtml
 msgid "Pool: %s"
-msgstr "Charca: %s"
+msgstr "Grupa: %s"
 
 #: view/pools/edit.xhtml
 msgid "Edit Pool: %s"
-msgstr "Editar Charca:%s"
+msgstr "Edytuj grupę: %s"
 
 msgid "pool|Update"
-msgstr "Actualizar"
+msgstr "Aktualizacja"
 
 #: view/profiles/edit.xhtml
 msgid "My Profile"
-msgstr "Mi Perfil"
+msgstr "Mój profil"
 
 msgid "Display name:"
-msgstr "Nombre de exhibir:"
+msgstr "Wyświetlana nazwa:"
 
 msgid "About Me (Markdown allowed):"
-msgstr "Sobre Yo (Markdown se permite):"
+msgstr "O mnie (obniżanie oceny dozwolone):"
 
 msgid "profile|Update"
-msgstr "Actualizar"
+msgstr "Aktualizacja"
 
 msgid "Avatar"
 msgstr "Avatar"
 
 msgid "avatar|Upload file:"
-msgstr "Subir archivo:"
+msgstr "Wyślij plik:"
 
 msgid "avatar-upload|Submit"
-msgstr "Someter"
+msgstr "Wyślij"
 
 msgid "Reset avatar"
-msgstr "Reinicializar avatar"
+msgstr "Zresetuj avatara"
 
 msgid "Delete your avatar and reset it to the default?"
-msgstr "¿Eliminar este avatar y volver al avatar por defecto?"
+msgstr ""
 
 #: view/profiles/show.xhtml
 msgid "profile|Edit"
-msgstr "Editar"
+msgstr "Edycja"
 
 msgid "Posts by %s"
-msgstr "Publicaciones de %s"
+msgstr "Posty %s"
 
 msgid "Add %s to a river"
-msgstr "Sumar %s a un río"
+msgstr "Dodaj %s do rzeki"
 
 #: view/request_password_reset.xhtml
 msgid "Password Reset"
-msgstr "Reinicializar constreña"
+msgstr "Resetowanie hasła"
 
 msgid ""
 "To reset your password, enter the email address associated with your "
 "account."
-msgstr "Para reinicializar tu constreña, entra la dirección de email que está asociado con tu cuenta."
+msgstr "Aby zresetować hasło, wpisz adres email powiązany z twoim kontem."
 
 msgid "password-reset|Submit"
-msgstr "Someter"
+msgstr "Wyślij"
 
 #: view/signup.xhtml
 msgid "Create a New Account"
-msgstr "Crear una Cuenta Nueva"
+msgstr "Utwórz nowe konto"
 
 msgid "Invitation code:"
-msgstr "Código de invitación:"
+msgstr "Kod zaproszenia:"
 
 msgid "Username:"
-msgstr "Nombre de usario:"
+msgstr "Nazwa użytkownika:"
 
 msgid "Password:"
-msgstr "Constreña:"
+msgstr "Hasło:"
 
 msgid "Confirm password:"
-msgstr "Confirma constreña:"
+msgstr "Potwierdź hasło:"
 
 msgid "(optional)"
-msgstr "(opcional)"
+msgstr "(opcjonalnie)"
 
 msgid "button|Sign up"
-msgstr "Registrar"
+msgstr "Zapisz się"
 
 #: view/rivers/{new,edit}.xhtml
 msgid "Edit River"
-msgstr "Editar el Río"
+msgstr "Edytuj rzekę"
 
 msgid "river-query|Search:"
-msgstr "Buscar:"
+msgstr "Szukaj:"
 
 msgid "river|Label:"
-msgstr "Etiqueta:"
+msgstr "Etykieta:"
 
 msgid "append to all other rivers"
-msgstr "adjuntar a todos los otros ríos"
+msgstr "dołącz do wszystkich innych rzek"
 
 msgid "river|Update"
-msgstr "Actualizar"
+msgstr "Aktualizacja"
 
 msgid "river|Create"
-msgstr "Crear"
+msgstr "Utwórz"
 
 #: view/rivers/index.xhtml
 msgid "My Rivers"
-msgstr "Mis Ríos"
+msgstr "Moje rzeki"
 
 msgid "new river"
-msgstr "río nuevo"
+msgstr "nowa rzeka"
 
 msgid "river|Global Queries"
-msgstr "Búsqueda Globales"
+msgstr "Globalne wyszukiwania"
 
 msgid ""
 "The following river queries are being appended to every other river query."
-msgstr "Las búsquedas del río siguientes están adjuntando a todas las otras búsquedas del río.  "
+msgstr "Następujące wyszukiwania rzeki zostają dołączone do każdego innego wyszukiwania rzeki."
 
 #: view/rivers/_list.xhtml
 msgid "(home river)"
-msgstr "(río inicio)"
+msgstr "(rzeka domowa)"
 
 msgid "Set as home river"
-msgstr "Establecer como el río inicio."
+msgstr "Ustaw jako rzekę domową"
 
 msgid "river|edit"
-msgstr "editar"
+msgstr "edytuj"
 
 msgid "river|delete"
-msgstr "suprimir"
+msgstr "usuń"
 
 #: view/rivers/_river.xhtml
 msgid "Delete this river?"
-msgstr "¿Eliminar este río?"
+msgstr ""
 
 #: view/rivers/_tips_and_examples.xhtml
 msgid "river-tips|Tips:"
-msgstr "Consejos:"
+msgstr "Wskazówki"
 
 msgid "For the search, enter one or more words or hashtags."
-msgstr "Para buscar, entra uno o más palabras o hashtags."
+msgstr "Aby wyszukać, wprowadź jedno, lub więcej słów lub hashtagów."
 
 msgid "Posts having any of the words will be included in the river."
-msgstr "Las publicaciones que tienen algunas de las palabras estarán incluido en el río. "
+msgstr "Posty zawierające którekolwiek ze słów zostaną zawarte w rzecze."
 
 msgid "Use a minus sign in front of a word to exclude posts with that word."
-msgstr "Usa un guión enfrente de una palabra para excluir las publicaciones con esa palabra."
+msgstr "Użyj znaku minus na początku słowa, aby wykluczyć posty z tym słowem."
 
 msgid ""
 "Example: %s#music -#classical%s will find posts about music, but not "
 "classical music."
-msgstr "Ejemplo: %s#music -#classical%s encontrarán publicaciones de música, pero no música clásica."
+msgstr "Przykład: %s#muzyka -#klasyczna%s wyszuka posty dotyczące muzyki, lecz nie muzyki klasycznej"
 
 msgid "Example: %s:river \"Special Interests\"%s"
-msgstr "Ejemplo: %s:river \"Intereses Especiales\"%s"
+msgstr "Przykład: %srzeka \"Szczególne zainteresowania\"%s"
 
 msgid ""
 "Other special terms: %s, %s and %s. These are for narrowing down to posts "
 "you have liked, commented on and subscribed to, respectively."
-msgstr "Otros Términos Especiales: %s, %s, and %s. Estos son para limitar a publicaciones que te gusta, comentaste en, y subscribiste a, respectivamente."
+msgstr "Inne szczególne wyrażenia: %s, %s i %s. Powyższe zawężają wyniki do postów - kolejno - które polubiłeś, skomentowałeś i do których jestes zapisany."
 
 msgid ""
 "(advanced) Use the special term %s followed by a river label in quotes to "
 "compose rivers using other rivers."
-msgstr "(avanzado) Usa el término espcial %s seguido de una etiqueta del río en comillas para composer ríos usando otros ríos. "
+msgstr "(zaawansowane) Użyj specjalnego określenia %s i etykiety rzeki w cudzysłowiu, aby utworzyć rzeki używając innych rzek"
 
 msgid "You can also %shave the beginner rivers recreated for you%s."
-msgstr "Puedes %sreinicializar los ríos predeterminado para ti%s."
+msgstr "Możesz również %sutworzyć rzeki sam%s ponownie."
 
 msgid "river|Examples"
-msgstr "Ejemplos"
+msgstr "Przykłady"
 
 msgid "river|Query"
-msgstr "Búsqueda"
+msgstr "Zapytanie"
 
 msgid "river|Description"
-msgstr "Descripción"
+msgstr "Opis"
 
 msgid "All posts originating from your tree"
-msgstr "Todas de publicaciones se origen de tu árbol"
+msgstr "Wszystkie posty pochodzące z twojego drzewa"
 
 msgid ""
 "All posts transmitted to your tree from every other tree in the forest, plus"
 " posts from your tree"
-msgstr "Todas de publicaciones trasmitieron a tu árbol de todos los otras arboles en el bosque, y publicaciones de tu árbol. "
+msgstr "Wszystkie posty przesłane do twojego drzewa z każdego innego drzewa w lesie, a także posty z twojego drzewa"
 
 msgid ""
 ":unread #knitting%sPosts tagged with %s#knitting%s which you have not read "
 "yet"
-msgstr ":unread #knitting%sLas publicaciones etiquetaron con %s#knitting%s cuales ya no leído"
+msgstr ":nieprzeczytane #robótki%sPosty oznaczone jako %s#robótki%s, których jeszcze nie przeczytałeś"
 
 msgid ""
 "#funny -#cats -#lolcats%sPosts tagged %s#funny%s, but not including posts "
 "about cats"
-msgstr "#funny -#cats -#lolcats%sLas publicaciones etiquetaron con %s#funny%s, pero no tiene publicaciones sobre gatos"
+msgstr "#śmieszne -#koty -#śmiesznekoty%sPosty oznaczone jako %s#śmieszne%s, ale nie zawierające postów o kotach"
 
 msgid ""
 "environment%sPosts that mention the environment, whether or not they were "
 "hashtagged with #environment"
-msgstr "environment%sLas publicaciones que mencionan el ambiente, si o no tiene la etiqueta #environment"
+msgstr "środowisko%sPosty, które mówią o środowisku, niezależnie od tego, czy były oznaczone hashem #środowisko"
 
 msgid ""
 ":tree #bug #feature%sBug reports and feature requests made by your treemates"
-msgstr ":tree #bug #feature%sLos reportes de error y peticiones por características se hecho de tus compañeros del árbol"
+msgstr ":drzewo #błąd #funkcja%sRaport błędów i sugestie funkcjonalności utworzone przez twoich kumpli z drzewa"
 
 msgid ""
 "\"new york\"%sPosts about New York, but not posts only having the word "
 "%snew%s"
-msgstr "\"new york\"%sLas publicaciones de Nueva York, pero no publicaciones que solamente tiene la palabra %snew%s"
+msgstr "\"nowy jork\"%sPosty o Nowym Jorku, ale nie tylko posty, które mają w nazwie słowo %snew%s"
 
 msgid ""
 "brazil -\"world cup\"%sPosts about Brazil, but not those mentioning the "
 "World Cup"
-msgstr "brazil -\"world cup\"%sLas publicaciones de Brazil, pero nada que menciona el World Cup "
+msgstr "brazylia -\"mistrzostwa świata\"%sPosty o Brazylii, ale nie te, które mówią o Mistrzostwach Świata"
 
 msgid ":from \"rekado\"%sPosts written by rekado"
-msgstr ":from \"rekado\"%sLas publicaciones escrito de rekado"
+msgstr ":od \"rekado\"%sPosty napisane przez rekado"
 
 msgid ""
 "#photography -:from \"Photophile\"%sPosts tagged with %s#photography%s, but "
 "not those by Photophile"
-msgstr "#photography -:from \"Photophile\"%sLas publicaciones etiqutaron con %s#photography%s, pero nada de Photophile"
+msgstr "#fotografia -:od \"Fotomaniak\"%sPosty oznaczone tagiem %s#fotografia%s, ale nie te, które zawierają słowo Fotomaniak"
 
 msgid ""
 "#restaurants :river \"Important\"%sPosts tagged with %s#restaurants%s, or "
 "posts matching the river \"Important\""
-msgstr "#restaurants :river \"Important\"%sPublicaciones etiquetaron con %s#restaurants%s, o las publicaciones que igualan el río se llama \"Important\""
+msgstr "#restauracje :rzeka \"ważne\"%sPosty oznaczone tagiem %s#restauracje%s, lub posty pasujące do rzeki \"ważne\""
 
 msgid ""
 "#restaurants +:river \"News Articles\"%sPosts tagged with %s#restaurants%s "
 "which also match the river \"News Articles\""
-msgstr "#restaurants +:river \"News Articles\"%sLas publicaciones etiquetaron con %s#restaurants%s cuales tambien igualan el río se llama \"News Articles\""
+msgstr "#restauracje +:rzeka \"Artykuły z wiadomości\"%sPosty oznaczone tagiem %s#restauracje%s, które pasują do rzeki \"Artykuły z wiadomości\""
 
 msgid ""
 "#restaurants -:river \"International News\"%sPosts tagged with "
 "%s#restaurants%s, but not those which match the river \"International News\""
-msgstr "#restaurants -:river \"International News\"%sLas publicaciones etiquetaron con %s#restaurants%s, pero nada que igualan el río se llama \"International News\""
+msgstr "#restauracje -:rzeka \"Wiadomości międzynarodowe\"%sPosty oznaczone tagiem %s#restauracje%s, ale nie te, które pasują do rzeki \"Wiadomości międzynarodowe\""
 
 #: view/chat/_index.xhtml
 msgid "Chat"
-msgstr "Chat"
+msgstr "Czat"
 
 msgid "chat-contacts|Online:"
-msgstr "En Línea"
+msgstr "Dostępny:"
 
 msgid "chat|(no contacts online)"
-msgstr "(no contactos en línea)"
+msgstr "(brak dostępnych kontaktów)"
 
 msgid "Start new chat with..."
-msgstr "Empieza un chat nuevo con..."
+msgstr "Rozpocznij nowy czat z ..."
 
 #: layout/_menu.xhtml
 msgid "menu|Profile"
-msgstr "Perfil"
+msgstr "Profil"
 
 msgid "menu|Settings"
-msgstr "Configuraciones"
+msgstr "Ustawienia"
 
 msgid "menu|Contact Lists"
-msgstr "Listos de contacto"
+msgstr "Lista kontaktów"
 
 msgid "menu|Pools"
-msgstr "Charcas"
+msgstr "Grupy"
 
 msgid "menu|Legible font size"
-msgstr "Tamaño de fuente legible"
+msgstr "Czytelny rozmiar czcionki"
 
 msgid "menu|Small font size"
-msgstr "Tamaño de fuente pequeño"
+msgstr "Mały rozmiar czcionki"
 
 msgid "menu|legible"
-msgstr "legible"
+msgstr "czytelny"
 
 msgid "menu|small"
-msgstr "pequeño"
+msgstr "mały"
 
 msgid "menu|Currently in &quot;small display&quot; mode; click to change"
-msgstr "Actualmente está en la moda por las pantallas pequeñas; hace clic para cambiar"
+msgstr "Aktualnie w trybie &quot;małego wyświetlacza&quot; kliknij aby zmienić"
 
 msgid "menu|Currently in &quot;large display&quot; mode; click to change"
-msgstr "Actualmente está en la moda por las pantallas grandes; hace clic para cambiar"
+msgstr "Aktualnie w trybie &quot;dużego wyświetlacza&quot; kliknij aby zmienić"
 
 msgid "menu|Large display"
-msgstr "Pantalla Grande"
+msgstr "Duży wyświetlacz"
 
 msgid "menu|Small display"
-msgstr "Pantalla Pequeña"
+msgstr "Mały wyświetlacz"
 
 msgid "menu|Administrate"
-msgstr "Administrar"
+msgstr "Zarządzaj"
 
 msgid "menu|Log out"
-msgstr "Cerrar sesión"
+msgstr "Wyloguj się"
 
 msgid "menu|Go Home"
-msgstr "Vas al Inicio"
+msgstr "Przejdź na stronę domową"
 
 msgid "menu|You are at Home"
-msgstr "Estás al Inicio"
+msgstr "Jesteś na stronie domowej"
 
 msgid "menu|New Post"
-msgstr "Publicación Nueva"
+msgstr "Nowy post"
 
 msgid "menu|Known Issues"
-msgstr "Problemas Conocidos"
+msgstr "Znane problemy"
 
 #: layout/_notifications.xhtml
 msgid "No notifications"
-msgstr "No notificaciones"
+msgstr "Brak powiadomień"
 
 msgid "1 notification"
-msgstr "1 notificación"
+msgstr "1 powiadomienie"
 
 msgid "%d notifications"
-msgstr "%d notificaciones"
+msgstr "%d powiadomień"
 
 #: layout/_chat.xhtml
 msgid "1 unread chat message from %1$s"
-msgstr "1 mensaje de chat que no leído de %1$s"
+msgstr "1 nieprzeczytana wiadomość czatu od %1$s"
 
 msgid "%2$d unread chat messages from %1$s"
-msgstr "%2$d mensajes de chat que no leído de %1$s"
+msgstr "%2$d nieprzeczytane wiadomości czatu od %1$s"
 
 #: public/js/comments.js
 msgid "Failed to post comment."
-msgstr "Fallo al publicar comentario."
+msgstr ""

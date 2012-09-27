@@ -5,25 +5,54 @@ body.body.excerpts-view .main {
     @include shadow;
     padding: 0;
     background-color: transparent;
+
+    div.panel {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        &.top {
+            padding-top: 30px;
+        }
+
+        ul, h1, h2, h3, h4, h5 {
+            margin: 0px;
+            padding: 0px 0px 1em 0px;
+        }
+
+        ul {
+            margin-left: 2em;
+        }
+    }
 }
 
 .excerpts-view {
     #header {
       padding: 20px;
-      border-radius: 3px 3px 0 0;
+      border-radius: $border-radius $border-radius 0 0;
     }
 
     #no-more-posts {
       text-align: center;
       background: $dust;
-      border-radius: 0 0 3px 3px;
+      border-radius: 0 0 $border-radius $border-radius;
       padding: 0.5em;
+    }
+
+    &.profile {
+        #no-more-posts {
+            display: none;
+        }
+
+        #see-more {
+            padding: 1em;
+        }
     }
 
     .post-excerpt {
         width: 100%;
         padding: 1em 0 1em;
         border-bottom: 1px dotted $leaf;
+        overflow: auto;
 
         .avatar {
             float: left;

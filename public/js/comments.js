@@ -1,22 +1,7 @@
-function showMoreComments(comments, n) {
-  var comment_ids = '';
-
-  for( i = 0; i < n; i++ ) {
-    var comment = comments.find('div.comment.hidden:last');
-    comment_ids = comment_ids + '/' + comment.data('comment-id');
-    comment.removeClass('hidden');
-  }
-  if( comments.find('div.comment.hidden:last').length == 0 ) {
-    comments.find('span.more-comments').hide();
-  }
-  $.get(
-    '/notifications/seen_comments' + comment_ids,
-    function(html) {
-      updateNumNotificationsUnseen(html);
-    }
-  );
-
-  $('div.comments').css('height', $('td.post').css('height') );
+function replaceNumCommentsFromAJAX(ajax_object, post) {
+  var numCommentsSpan = ajax_object.filter('span.num-comments.hidden').detach();
+  post.find('.comments span.num-comments').replaceWith(numCommentsSpan);
+  numCommentsSpan.removeClass('hidden');
 }
 
 function insertCommentHtmlFor( postId, commentId ) {
@@ -27,16 +12,15 @@ function insertCommentHtmlFor( postId, commentId ) {
   }
 
   $.get(
-    '/comments/_comment/' + commentId,
+    '/comments/_comment/'+commentId+'/' + post.find('.comments .num-comments').data('n'),
     function(html) {
       var o = $(html);
       o.insertBefore( post.find('.comments .detachable') );
+      replaceNumCommentsFromAJAX(o, post);
       var height = o.height();
       var animationDuration = height*5;
       o.hide().slideDown(animationDuration);
       $('.comments .success[data-comment-id="'+commentId+'"]').fadeOut();
-      var newNum = 1 + parseInt(post.find('span.num-comments:first').text());
-      post.find('span.num-comments').text(newNum);
 
       if( $('textarea.comment.focused').length ) {
         var scrollable = post.find('div.comments-pane');
@@ -53,7 +37,7 @@ function insertCommentHtmlFor( postId, commentId ) {
 }
 
 function hideLoadCommentsLinkIfAllShown(element) {
-  var n = parseInt( element.find('.num-comments').text() );
+  var n = parseInt( element.find('.comments .num-comments').text() );
   if( element.find('div.comment').length == n ) {
     element.find('a.load-comments').hide();
   }
@@ -62,11 +46,6 @@ function hideLoadCommentsLinkIfAllShown(element) {
 /* ---------------------------------------------- */
 
 $(document).ready( function() {
-  $('a.more-comments').live( 'click', function(event) {
-    event.preventDefault();
-    showMoreComments( $(this).closest('.comments'), $(this).data('n') );
-  } );
-
   $('.jump-to-comment').live( 'click', function(event) {
     event.preventDefault();
     var comments = $(this).closest('div.comments');
@@ -85,30 +64,28 @@ $(document).ready( function() {
 
     var post = $(this).closest('.post, .post-excerpt');
     var postId = post.data('post-id');
-    var toId = post.find('.comments .comment:first').data('comment-id');
+    var comments = post.find('.comments');
+    var toId = comments.find('.comment:first').data('comment-id');
 
-    insertSpinnerBefore('.comments .comment:first', 16);
+    addSpinner(comments.find('.comment:first'), 'before', 16);
     $.get(
-      '/comments/_comments/'+postId+'/'+toId+'/'+post.find('.num-comments').data('n'),
+      '/comments/_comments/'+postId+'/'+toId+'/'+comments.find('span.num-comments').data('n'),
       function(html) {
         if( $.trim(html).length == 0 ) {
           return;
         }
         var o = $(html);
-        var searchableContainer = $('<div></div>');
-        searchableContainer.append(o);
-        var numCommentsSpan = searchableContainer.find('span.num-comments.hidden').clone();
-        post.find('span.num-comments').replaceWith(numCommentsSpan);
-        numCommentsSpan.removeClass('hidden');
+        updateNumNotificationsUnseen( o.filter('span.num-notifs-unseen').detach().text() );
 
         var scrollable = $('div.comments-pane');
         if( $('.excerpts-view').length ) {
           scrollable = $('html');
         }
         var initialScrollTop = scrollable.scrollTop();
-        var initialHeight = scrollable.find('div.comments:first').height();
-        o.insertBefore('.comments .comment:first');
-        var delta = scrollable.find('div.comments:first').height() - initialHeight;
+        var initialHeight = comments.height();
+        o.insertBefore(comments.find('.comment:first'));
+        var delta = comments.height() - initialHeight;
+        replaceNumCommentsFromAJAX(o, post);
 
         scrollable.scrollTop( initialScrollTop + delta );
         hideLoadCommentsLinkIfAllShown(post);
@@ -207,7 +184,7 @@ $(document).ready( function() {
   $('form.comment input.submit').live( 'click', function() {
     var submitButton = $(this);
     submitButton.attr('disabled', 'disabled');
-    addSpinner( submitButton.closest('.form-buttons'), 16 );
+    addSpinner( submitButton.closest('.form-buttons'), 'append', 16 );
     var form = $(this).closest('form.comment');
     var textarea = form.find('textarea.comment');
     clearInterval(timerSaveTextAreas);
@@ -235,6 +212,7 @@ $(document).ready( function() {
             ;
           }
         } else {
+          //TRANSLATEME
           alert('Failed to post comment.');
         }
         submitButton.removeAttr('disabled');
