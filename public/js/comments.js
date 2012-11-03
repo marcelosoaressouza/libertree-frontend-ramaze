@@ -7,7 +7,7 @@ function replaceNumCommentsFromAJAX(ajax_object, post) {
 function insertCommentHtmlFor( postId, commentId ) {
   var post = $('.post[data-post-id="'+postId+'"], .post-excerpt[data-post-id="'+postId+'"]');
 
-  if( post.find('.comments:visible').length == 0 ) {
+  if( post.find('.comments:visible').length === 0 ) {
     return;
   }
 
@@ -38,7 +38,7 @@ function insertCommentHtmlFor( postId, commentId ) {
 
 function hideLoadCommentsLinkIfAllShown(element) {
   var n = parseInt( element.find('.comments .num-comments').text() );
-  if( element.find('div.comment').length == n ) {
+  if( element.find('div.comment').length === n ) {
     element.find('a.load-comments').hide();
   }
 };
@@ -67,11 +67,11 @@ $(document).ready( function() {
     var comments = post.find('.comments');
     var toId = comments.find('.comment:first').data('comment-id');
 
-    addSpinner(comments.find('.comment:first'), 'before', 16);
+    Libertree.UI.addSpinner(comments.find('.comment:first'), 'before', 16);
     $.get(
       '/comments/_comments/'+postId+'/'+toId+'/'+comments.find('span.num-comments').data('n'),
       function(html) {
-        if( $.trim(html).length == 0 ) {
+        if( $.trim(html).length === 0 ) {
           return;
         }
         var o = $(html);
@@ -89,7 +89,7 @@ $(document).ready( function() {
 
         scrollable.scrollTop( initialScrollTop + delta );
         hideLoadCommentsLinkIfAllShown(post);
-        removeSpinner('.comments');
+        Libertree.UI.removeSpinner('.comments');
       }
     );
 
@@ -139,52 +139,20 @@ $(document).ready( function() {
     window.location = '#' + $(this).data('id-back');
   } );
 
-  $('div.comment a.like').live( 'click', function(event) {
-    event.preventDefault();
-    var link = $(this);
-    var comment = link.closest('div.comment');
-    if( comment.length ) {
-      $.get(
-        '/likes/comments/create/' + comment.data('comment-id'),
-        function(response) {
-          var h = $.parseJSON(response);
-          link.addClass('hidden');
-          link.siblings('a.unlike').removeClass('hidden').data('comment-like-id', h['comment_like_id']);
-          comment.find('.num-likes').text( h['num_likes'] ).show();
-          comment.find('.num-likes').attr('title', h['liked_by']);
-        }
-      );
-    }
-  } )
+  $('div.comment a.like').live(
+    'click',
+    Libertree.mkLike( 'comment', 'div.comment' )
+  );
 
-  $('div.comment a.unlike').live( 'click', function(event) {
-    event.preventDefault();
-    var link = $(this);
-    var comment = link.closest('div.comment');
-    if( comment.length ) {
-      $.get(
-        '/likes/comments/destroy/' + link.data('comment-like-id'),
-        function(response) {
-          var h = $.parseJSON(response);
-          link.addClass('hidden');
-          link.siblings('a.like').removeClass('hidden');
-          var num_likes = comment.find('.num-likes');
-          num_likes.text( h['num_likes'] );
-          if( h['num_likes'] == '0 likes' ) {
-            num_likes.hide();
-          }
-          else {
-            comment.find('.num-likes').attr('title', h['liked_by']);
-          }
-        }
-      );
-    }
-  } )
+  $('div.comment a.unlike').live(
+    'click',
+    Libertree.mkUnlike( 'comment', 'div.comment' )
+  );
 
   $('form.comment input.submit').live( 'click', function() {
     var submitButton = $(this);
     submitButton.attr('disabled', 'disabled');
-    addSpinner( submitButton.closest('.form-buttons'), 'append', 16 );
+    Libertree.UI.addSpinner( submitButton.closest('.form-buttons'), 'append', 16 );
     var form = $(this).closest('form.comment');
     var textarea = form.find('textarea.comment');
     clearInterval(timerSaveTextAreas);
@@ -205,7 +173,7 @@ $(document).ready( function() {
           post.find('.subscribe').addClass('hidden');
           post.find('.unsubscribe').removeClass('hidden');
 
-          if( $('#comment-'+h.commentId).length == 0 ) {
+          if( $('#comment-'+h.commentId).length === 0 ) {
             form.closest('.comments').find('.success')
               .attr('data-comment-id', h.commentId) /* setting with .data() can't be read with later .data() call */
               .fadeIn()
@@ -216,7 +184,7 @@ $(document).ready( function() {
           alert('Failed to post comment.');
         }
         submitButton.removeAttr('disabled');
-        removeSpinner( submitButton.closest('.form-buttons') );
+        Libertree.UI.removeSpinner( submitButton.closest('.form-buttons') );
       }
     );
   } );

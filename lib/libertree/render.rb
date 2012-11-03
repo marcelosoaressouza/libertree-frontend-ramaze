@@ -7,32 +7,33 @@ module Libertree
   def self.markdownify(s)
     return ''  if s.nil? or s.empty?
 
-    markdown ||= Redcarpet::Markdown.new(
-      Libertree::Markdown.new,
-      {
-        autolink: true,
-        space_after_headers: true,
-        no_intra_emphasis: true,
-        strikethrough: true
-      }
-    )
-    markdown.render s
+    Markdown.new(
+      s,
+      :filter_html,
+      :smart,
+      :strike,
+      :autolink,
+      :hard_wrap
+    ).to_html.force_encoding('utf-8')
   end
 
   def self.hashtaggify(s)
     return ''  if s.nil? or s.empty?
-    s.force_encoding('utf-8').gsub(/(?<=^|\s|\()#([\p{Word}\p{Pd}]+)(?=\s|\b|\)|$)/i) {
+    s.gsub(/(?<=^|\p{Space}|\()#([\p{Word}\p{Pd}]+)(?=\p{Space}|\b|\)|$)/i) {
       %|<a href="/rivers/ensure_exists/%23#{$1.downcase}" class="hashtag">##{$1}</a>|
     }
   end
 
-  def self.post_processing(s)
+  # @param [String] rendered markdown as HTML string
+  def self.autolinker(s)
     return ''  if s.nil? or s.empty?
 
     # Crude autolinker for relative links to local resources
-    s.gsub!(%r{(?<=^|\s|^<p>|^<li>)(/posts/show/\d+(/\d+(#comment-\d+)?)?)}, "<a href='\\1'>\\1</a>")
+    s.gsub(%r{(?<=^|\p{Space}|^<p>|^<li>)(/posts/show/\d+(/\d+(#comment-\d+)?)?)}, "<a href='\\1'>\\1</a>")
+  end
 
-    html = Nokogiri::HTML::fragment(s)
+  # @param [Nokogiri::HTML::DocumentFragment] parsed HTML tree
+  def self.process_links(html)
     html.css('a').each do |a|
       # strip javascript
       if a['href']
@@ -43,18 +44,21 @@ module Libertree
         a['href'] = resolve_redirection(a['href'])
       end
     end
+    html
+  end
 
-    # hashtaggify everything that is not inside of code or pre tags
+  # @param [Nokogiri::HTML::DocumentFragment] parsed HTML tree
+  def self.apply_hashtags(html)
+    # hashtaggify everything that is not inside of code, link or pre tags
     html.traverse do |node|
       if node.text? && ["code", "pre", "a"].all? {|tag| node.ancestors(tag).empty? }
         hashtag = Libertree::hashtaggify(node.text)
         if ! hashtag.eql? node.text
-          node.replace hashtag
+          node.replace( Nokogiri::HTML.fragment(hashtag) )
         end
       end
     end
-
-    html.to_s
+    html
   end
 
   def self.resolve_redirection( url_s )
@@ -100,13 +104,32 @@ module Libertree
     resolution
   end
 
+  def self.render_unsafe(s)
+    Markdown.new(
+      s,
+      :strike,
+      :autolink,
+      :hard_wrap
+    ).to_html.force_encoding('utf-8')
+  end
+
+  # filter HTML but ignore markdown
+  def self.plain(s)
+    Nokogiri::HTML.fragment(self.markdownify(s)).inner_text
+  end
+
   def self.render(s, autoembed=false)
-    html = markdownify(s)
-    if autoembed
-      # FIXME: maybe this should only be done for posts
-      html = Libertree::Embedder.inject_objects(html)
-    end
-    html
+    pipeline = [
+      method(:markdownify),
+      method(:autolinker),
+      Nokogiri::HTML.method(:fragment),
+      method(:process_links),
+      method(:apply_hashtags),
+      (Embedder.method(:inject_objects) if autoembed)
+    ].compact
+
+    # apply methods sequentially to string
+    pipeline.reduce(s) {|acc,f| f.call(acc)}.to_s
   end
 
   module HasRenderableText
