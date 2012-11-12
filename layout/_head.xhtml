@@ -5,6 +5,7 @@
 
   #{ css 'ui-lightness/jquery-ui-1.8.21.custom' }
   #{ css 'chosen' }
+  #{ css 'bootstrap' }
   #{ css_nocache 'application' }
   #{ css_nocache (account.font_css || 'fonts') }
   #{ css_nocache 'single-post-view' }
@@ -26,10 +27,12 @@
   #{ js 'jquery.cookie' }
   #{ js 'chosen.jquery.min' }
   #{ js 'textinputs_jquery' }
+  #{ js 'bootstrap.tooltip.popover' }
 
-  #{ js_nocache 'helpers' }
   #{ js_nocache 'libertree' }
+  #{ js_nocache 'libertree/post_loader' }
   #{ js_nocache 'libertree/ui' }
+  #{ js_nocache 'libertree/session' }
   #{ js_nocache 'application' }
   #{ js_nocache 'likes' }
   #{ js_nocache 'comments' }
@@ -51,9 +54,7 @@
   <?r if account.admin? ?>
     #{ js_nocache 'admin' }
   <?r end ?>
-  <?r if @continuous_scrolling ?>
-    #{ js_nocache 'continuous-scrolling' }
-  <?r end ?>
+  #{ controller_js }
 
   <style type="text/css">
     .excerpts-view .post-excerpt div.excerpt .overflowed {
