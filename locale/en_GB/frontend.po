@@ -225,6 +225,8 @@ msgstr ""
 #: controller/rivers.rb
 msgid "You already have a river for that."
 msgstr ""
+msgid "Please input a valid label for this river."
+msgstr ""
 
 #: view/comments/_comments.xhtml
 
@@ -431,6 +433,10 @@ msgstr ""
 msgid "%d minutes ago"
 msgstr ""
 msgid "seconds ago"
+msgstr ""
+
+#: helper/comment.rb
+msgid "Click to see previous comment by %s"
 msgstr ""
 
 #: view/search.xhtml
@@ -856,6 +862,14 @@ msgstr ""
 msgid "Failed to post comment."
 msgstr ""
 
+#: view/tags/index.xhtml
+msgid "Save this hashtag listing as a river."
+msgstr ""
+msgid "Add this hashtag to an existing river."
+msgstr ""
+msgid "There are no posts matching this hashtag."
+msgstr ""
+
 #: view/intro/index.xhtml
 msgid "tutorial-river-label|My interests"
 msgstr ""
@@ -925,15 +939,15 @@ msgstr ""
 
 msgid "tutorial-river-label|Unread posts"
 msgstr ""
-msgid "tutorial|Unread posts%sAll posts on Libertree which you haven't read yet"
+msgid "tutorial|All posts on Libertree which you haven't read yet"
 msgstr ""
 
 msgid "tutorial-river-label|Posts from the forest"
 msgstr ""
-msgid "tutorial|Posts from the forest%sAll posts on Libertree"
+msgid "tutorial|All posts on Libertree"
 msgstr ""
 
 msgid "tutorial-river-label|My activity"
 msgstr ""
-msgid "tutorial|My activity%sPosts that you have liked, commented on, or are subscribed to"
+msgid "tutorial|Posts that you have liked, commented on, or are subscribed to"
 msgstr ""
