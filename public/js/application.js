@@ -1,32 +1,11 @@
-// TODO: replace with bootstrap popover
-function fadingAlert(message, x, y) {
-  var div = $('<div class="fading-alert has-shadow">'+message+'</div>');
-  div.appendTo('html');
-
-  if( ! ( typeof x === 'undefined' || typeof y === 'undefined' ) ) {
-    div.css( { left: x+'px', top: y+'px' } );
-  }
-  setTimeout(
-    function() {
-      $('.fading-alert').fadeOut(2000);
-    },
-    1000 + message.length * 50
-  );
-}
-
-/* ---------------------------------------------------- */
-
 $(document).ready( function() {
 
-  /* TODO: This looks refactorable */
   $('#menu-account').click( function() {
-    if( $('#account-window').is(':visible') ) {
-      Libertree.UI.hideWindows();
-      return false;
-    }
-
+    var show_window = ! $('#account-window').is(':visible');
     Libertree.UI.hideWindows();
-    $('#account-window').toggle();
+    if (show_window) {
+      $('#account-window').show();
+    }
     return false;
   } );
 
@@ -124,7 +103,7 @@ $(document).ready( function() {
   } );
 
   $('.mark-read').live( 'click', function() {
-    markPostRead( $(this).closest('div.post, div.post-excerpt').data('post-id') );
+    Libertree.Posts.markRead( $(this).closest('div.post, div.post-excerpt').data('post-id') );
     return false;
   } );
 

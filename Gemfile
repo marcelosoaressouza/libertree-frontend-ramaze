@@ -9,7 +9,6 @@ gem 'dalli'  # memcached client
 gem 'unicorn'
 gem 'pony'   # email lib
 gem 'em-websocket'
-gem 'rcrypt'
 gem 'rpeg-markdown', '1.4.6', :git => 'git://github.com/rekado/rpeg-markdown.git'
 gem 'nokogiri'
 gem 'mini_magick'
@@ -18,7 +17,6 @@ gem 'ruby-oembed'
 gem 'fast_gettext'
 
 gem 'libertree-model', :git => 'git://github.com/Libertree/libertree-model-rb.git'
-gem 'libertree-client', :git => 'git://github.com/Libertree/libertree-client-rb.git'
 
 group 'development' do
   gem 'rspec'

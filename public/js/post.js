@@ -1,14 +1,3 @@
-function markPostRead(post_id) {
-  $.get(
-    '/posts/_read/' + post_id,
-    function() {
-      var post = $('*[data-post-id="'+post_id+'"]');
-      post.find('.mark-read').addClass('hidden');
-      post.find('.mark-unread').removeClass('hidden');
-    }
-  );
-}
-
 $(document).ready( function() {
 
   $('.post-tools a.like').live(
@@ -105,7 +94,7 @@ $(document).ready( function() {
 
   $('.post-tools .visibility').live( 'click', function(event) {
     event.preventDefault();
-    fadingAlert(
+    Libertree.UI.fadingAlert(
       $(this).data('description'),
       event.clientX - 200,
       event.clientY + 10

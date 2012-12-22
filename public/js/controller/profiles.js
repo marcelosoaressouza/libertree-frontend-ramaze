@@ -1,3 +1,16 @@
+// register tag loader function as continuous scroll handler
+$(window).scroll( function() {
+  Libertree.UI.continuousScrollHandler(
+    function() {
+      Libertree.PostLoader.loadFromProfile(
+        $('#post-excerpts').data('member-id'),
+        'older',
+        $('.post-excerpt:last').data('t')
+      );
+    }
+  );
+} );
+
 $(document).ready( function() {
   $('#avatar-reset').live( 'click', function(event) {
     event.preventDefault();
@@ -15,7 +28,8 @@ $(document).ready( function() {
       '/contact-lists/add_member/'+contactListId+'/'+memberId,
       function() {
         Libertree.UI.removeSpinner( selector.parent() );
-        fadingAlert('Added to contact list.');
+        // TRANSLATEME
+        Libertree.UI.fadingAlert('Added to contact list.');
         selector.val('0');
         selector.trigger("liszt:updated");
       }
