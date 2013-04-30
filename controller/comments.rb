@@ -49,8 +49,8 @@ module Controller
       @post ||= Libertree::Model::Post[ post_id.to_i ]
       @comment_fetch_options ||= { limit: 4 }
       # TODO: merge the two calls to @post.comments
-      @all_comments = @post.comments
-      @comments = @post.comments(@comment_fetch_options)
+      @all_comments ||= @post.comments
+      @comments ||= @post.comments(@comment_fetch_options)
       @comments.each do |c|
         Libertree::Model::Notification.mark_seen_for_account_and_comment_id( account, c.id )
       end
