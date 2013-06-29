@@ -1,3 +1,5 @@
+require 'base64'
+
 module Controller
   class Accounts < Base
     map '/accounts'
@@ -8,6 +10,8 @@ module Controller
     layout do |path|
       case path
       when 'heartbeat'
+        nil
+      when 'upload_key'
         nil
       else
         :default
@@ -124,6 +128,29 @@ module Controller
 
     def heartbeat
       account.time_heartbeat = Time.now
+    end
+
+    def upload_key
+      return  if ! request.post?
+
+      key_string = request['key'].to_s.strip
+
+      begin
+        key = OpenSSL::PKey.read Base64.decode64(key_string)
+      rescue ArgumentError
+        return { 'error' => _('This is not a valid public key') }.to_json
+      end
+
+      if key.private?
+        return { 'error' => _('This is a private key. Please never share your private key!') }.to_json
+      end
+
+      account.public_key = key_string
+      {
+        'success' => true,
+        'msg' => _('Your public key has been stored.'),
+        'key' => account.public_key
+      }.to_json
     end
   end
 end

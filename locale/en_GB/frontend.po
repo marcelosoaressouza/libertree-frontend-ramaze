@@ -396,6 +396,12 @@ msgid "To delete your account and all associated data, input your username below
 msgstr ""
 msgid "account-delete|Confirm"
 msgstr ""
+msgid "This is not a valid public key"
+msgstr ""
+msgid "This is a private key. Please never share your private key!"
+msgstr ""
+msgid "Your public key has been stored."
+msgstr ""
 
 #: view/accounts/change_password.xhtml
 
