@@ -13,6 +13,8 @@ module Controller
         nil
       when 'upload_key'
         nil
+      when 'key'
+        nil
       else
         :default
       end
@@ -151,6 +153,20 @@ module Controller
         'msg' => _('Your public key has been stored.'),
         'key' => account.public_key
       }.to_json
+    end
+
+    # TODO: make this publicly accessible.
+    # Maybe it would be better to embed the key on the local profile pages
+    # and let people add them to the local address book from there?
+
+    # TODO: is it a problem that this exposes member information to unauthenticated people?
+    def key
+      account = Libertree::Model::Account[ :username => request['username'].to_s ]
+      if account && account.public_key
+        { 'success' => true, 'key' => account.public_key }
+      else
+        { 'error' => 'not found' }
+      end
     end
   end
 end
